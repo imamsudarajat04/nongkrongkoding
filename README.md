@@ -3,20 +3,20 @@
 
 ## Fitur Superadmin
 
-- [x] Login 
-- [x] Dashboard
-- [x] Input Kategori Materi
-- [x] Input Materi
-- [x] Input Founnder
-- [x] Input FAQ
-- [x] Setting Tema Landingpage 
+- [-] Login 
+- [-] Dashboard
+- [-] Input Kategori Materi
+- [-] Input Materi
+- [-] Input Founnder
+- [-] Input FAQ
+- [-] Setting Tema Landingpage 
 
 ## Fitur User
 
-- [x] Login Untuk User
-- [x] Dashboard User
-- [x] Update Profile User
-- [x] Nonton Materi
-- [x] Pembayaran
+- [-] Login Untuk User
+- [-] Dashboard User
+- [-] Update Profile User
+- [-] Nonton Materi
+- [-] Pembayaran
 
 <p align="center">Copyright &copy; NongkrongKoding 2022</p>
