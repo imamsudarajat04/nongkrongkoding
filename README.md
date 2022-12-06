@@ -5,6 +5,7 @@
 
 - [-] Login 
 - [-] Dashboard
+- [-] Input Mentor
 - [-] Input Kategori Materi
 - [-] Input Materi
 - [-] Input Founnder
@@ -17,9 +18,17 @@
 - [-] Dashboard User
 - [-] Update Profile User
 - [-] Nonton Materi
-- [-] Pembayaran
+- [-] Pembayaran (Soon)
 
-## Cara Menggunakan Sweetalert di controller
-<a href="https://realrashid.github.io/sweet-alert/usage?id=usage">Klik Disini</a>
+## Cara Menggunakan Sweetalert & DataTables
+<a href="https://realrashid.github.io/sweet-alert/">SweetAlert</a>
+<a href="https://datatables.net/manual/installation">DataTables</a>
+
+## Spesifikasi Website NongkrongKoding
+- Laravel V9.42.2
+- PHP (v8.1.10)
+- Spatie/Permission
+- Yajra DataTables
+- SweetAlert Alrashid
 
 <p align="center">Copyright &copy; NongkrongKoding 2022</p>
