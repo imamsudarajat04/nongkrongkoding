@@ -16,6 +16,9 @@
                 @include('components.adminnav')
 
                 <div class="content-wrapper">
+                    <div class="container-xxl flex-grow-1 container-p-y">
+                        <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">@yield('breadOld')Admin /</span> Dashboard @yield('breadNew')</h4>
+                    </div>
 
                     @yield('adminContent')
 

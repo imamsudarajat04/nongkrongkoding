@@ -13,6 +13,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Test Admin Page
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+
+Route::get('/dashboard', function () {
+    return view('layouts.adminlayout');
+});
+
+
+// Test User Page
+Route::get('/user', function () {
+    return view('layouts.userlayout');
+});
+
+
+// Test Login Page Custom
+Route::get('/login', function () {
+    return view('auth.master');
 });
