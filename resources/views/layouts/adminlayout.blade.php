@@ -4,6 +4,7 @@
     @include('includes.styleadmin')
 </head>
 <body>
+@include('sweetalert::alert')
     <div class="layout-wrapper layout-content-navbar">
 
         <div class="layout-container">

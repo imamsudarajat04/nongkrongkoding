@@ -19,4 +19,7 @@
 - [-] Nonton Materi
 - [-] Pembayaran
 
+## Cara Menggunakan Sweetalert di controller
+<a href="https://realrashid.github.io/sweet-alert/usage?id=usage">Klik Disini</a>
+
 <p align="center">Copyright &copy; NongkrongKoding 2022</p>
