@@ -5,7 +5,9 @@
 
 - [-] Login 
 - [-] Dashboard
-- [-] Input Mentor
+- [-] Input User
+- [-] Input Permission
+- [-] Input Role
 - [-] Input Kategori Materi
 - [-] Input Materi
 - [-] Input Founnder
@@ -19,6 +21,7 @@
 - [-] Update Profile User
 - [-] Nonton Materi
 - [-] Pembayaran (Soon)
+- [-] Kode Reveral (Soon)
 
 ## Cara Menggunakan Sweetalert & DataTables
 <a href="https://realrashid.github.io/sweet-alert/">SweetAlert</a>
