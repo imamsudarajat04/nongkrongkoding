@@ -653,7 +653,8 @@
 
                             <div class="col-lg-5">
                                 <div id="map">
-                                    <iframe src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="636px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                    {{-- <iframe src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="636px" frameborder="0" style="border:0" allowfullscreen></iframe> --}}
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63828.914749279924!2d104.44957766074359!3d0.9171476503030395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d972f6dec85825%3A0xec4ab548c30d02a1!2sTanjung%20Pinang%2C%20Tanjung%20Pinang%20City%2C%20Riau%20Islands!5e0!3m2!1sen!2sid!4v1670358120541!5m2!1sen!2sid" width="100%" height="636px" frameborder="0" style="border:0" allowfullscreen></iframe>
                                 </div>
                             </div>
 

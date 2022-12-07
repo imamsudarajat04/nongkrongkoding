@@ -18,9 +18,3 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard
 //     //Dashboard
 //     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
 // });
-
-
-// // Test Login Page Custom
-// Route::get('/login', function () {
-//     return view('auth.master');
-// });
