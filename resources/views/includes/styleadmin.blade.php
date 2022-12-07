@@ -9,7 +9,7 @@ href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400
 rel="stylesheet"
 />
 
-<link rel="icon" type="image/x-icon" href="{{ asset('admin/assets/img/logo/4K-3.png') }}"/>
+<link rel="shortcut icon" href="{{ asset('admin/assets/img/logo/nongki.ico') }}" type="image/x-icon">
 
 <link rel="stylesheet" href="{{ asset('admin/assets/vendor/fonts/boxicons.css') }}" />
 
