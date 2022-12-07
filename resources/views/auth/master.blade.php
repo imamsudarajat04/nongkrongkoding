@@ -79,7 +79,7 @@
                             <input type="password" placeholder="Konfirmasi Password" />
                         </div>
                         
-                        <input type="submit" class="btn" value="Sign up" />
+                        <input type="submit" class="btn" value="Daftar" />
 
                         {{-- <p class="social-text">Or Sign up with social platforms</p>
                         <div class="social-media">
