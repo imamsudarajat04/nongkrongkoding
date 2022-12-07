@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\LandingPageController;
 
 //Landing Page
@@ -18,4 +19,4 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard
 //     //Dashboard
 //     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
 // });
-Route::get('/registrasi', [RegisterController::class, 'index'])->name('register.index');
+Route::post('/register/post', [RegisterController::class, 'store'])->name('register.post');

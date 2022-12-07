@@ -16,6 +16,6 @@ class RegisterController extends Controller
         $data['password'] = Hash::make($request->password);
 
         User::create($data);
-        return redirect()->route('register.index')->with('success', 'Data berhasil ditambahkan');
+        return redirect()->route('register.post')->with('success', 'Data berhasil ditambahkan');
     }
 }
