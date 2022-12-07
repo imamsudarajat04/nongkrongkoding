@@ -9,7 +9,7 @@ href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400
 rel="stylesheet"
 />
 
-<link rel="icon" type="image/x-icon" href="{{ asset('admin/assets/img/favicon/favicon.ico') }}"/>
+<link rel="icon" type="image/x-icon" href="{{ asset('admin/assets/img/logo/4K-3.png') }}"/>
 
 <link rel="stylesheet" href="{{ asset('admin/assets/vendor/fonts/boxicons.css') }}" />
 
@@ -25,4 +25,4 @@ rel="stylesheet"
 
 <script src="{{ asset('admin/assets/js/config.js') }}"></script>
 
-<title>@yield('adminTitle')</title>
+<title>@yield('adminTitle', 'Dashboard Admin')</title>
