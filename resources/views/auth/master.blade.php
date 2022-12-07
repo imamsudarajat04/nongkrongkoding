@@ -7,7 +7,7 @@
 
         {{-- <title>@yield('oginTitle')</title> --}}
         <title>Masuk | Daftar</title>
-
+        <link rel="shortcut icon" href="{{ asset('admin/assets/img/logo/nongki.ico') }}" type="image/x-icon">
         <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="{{ asset('authpage/style.css') }}">
     </head>
