@@ -12,6 +12,7 @@
     </head>
 
     <body>
+        @include('sweetalert::alert')
         <div class="container">
             <div class="forms-container">
                 <div class="signin-signup">

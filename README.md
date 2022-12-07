@@ -10,8 +10,9 @@
 - [-] Input Role
 - [-] Input Kategori Materi
 - [-] Input Materi
-- [-] Input Founnder
+- [-] Input Founder
 - [-] Input FAQ
+- [-] Cek Ip Address tiap user
 - [-] Setting Tema Landingpage 
 
 ## Fitur User
