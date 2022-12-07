@@ -20,12 +20,12 @@
 
                         <div class="input-field">
                             <i class="fas fa-user"></i>
-                            <input type="text" placeholder="Email"/>
+                            <input type="text" name="email" id="email" placeholder="Email"/>
                         </div>
 
                         <div class="input-field">
                             <i class="fas fa-lock"></i>
-                            <input type="password" placeholder="Password" />
+                            <input type="password" name="password" id="password" placeholder="Password" />
                         </div>
 
                         <input type="submit" value="Masuk" class="btn solid" />
@@ -55,27 +55,27 @@
                         <h2 class="title">Daftar</h2>
                         <div class="input-field">
                             <i class="fas fa-user"></i>
-                            <input type="text" placeholder="Nama Lengkap" />
+                            <input type="text" name="name" id="name" placeholder="Nama Lengkap" />
                         </div>
 
                         <div class="input-field">
                             <i class="fas fa-envelope"></i>
-                            <input type="email" placeholder="Email" />
+                            <input type="email" name="email" id="email" placeholder="Email" />
                         </div>
 
                         <div class="input-field">
                             <i class="fas fa-phone"></i>
-                            <input type="text" placeholder="No. Telpon" />
+                            <input type="text" name="telphone" id="telphone" placeholder="No. Telpon" />
                         </div>
 
                         <div class="input-field">
                             <i class="fas fa-lock"></i>
-                            <input type="password" placeholder="Password" />
+                            <input type="password" name="password" id="password"  placeholder="Password" />
                         </div>
                         
                         <div class="input-field">
                             <i class="fas fa-lock"></i>
-                            <input type="password" placeholder="Konfirmasi Password" />
+                            <input type="password" name="confirm_password" id="confirm_password" placeholder="Konfirmasi Password" />
                         </div>
                         
                         <input type="submit" class="btn" value="Daftar" />
