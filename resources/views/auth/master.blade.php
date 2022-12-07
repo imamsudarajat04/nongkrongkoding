@@ -30,6 +30,7 @@
                         </div>
 
                         <input type="submit" value="Masuk" class="btn solid" />
+                        <a href="{{ route('landingPage.index') }}" class="btn">Batal</a>
 
                         {{-- <p class="social-text">Or Sign in with social platforms</p>
                         <div class="social-media">

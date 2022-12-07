@@ -11,6 +11,13 @@ input {
 font-family: "Poppins", sans-serif;
 }
 
+a{
+    text-decoration: none;
+    text-align: center;
+    padding-top: 14px;
+    font-size: small;
+}
+
 .container {
 position: relative;
 width: 100%;
