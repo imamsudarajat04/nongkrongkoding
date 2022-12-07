@@ -18,3 +18,4 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard
 //     //Dashboard
 //     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
 // });
+Route::get('/registrasi', [RegisterController::class, 'index'])->name('register.index');
