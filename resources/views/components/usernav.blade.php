@@ -17,7 +17,7 @@
                         <li class="scroll-to-section"><a href="#contact">Contact</a></li> 
                         <li class="scroll-to-section">
                             <div class="border-first-button">
-                                <a href="{{ route('login.index') }}">Get Start</a>
+                                <a href="{{ route('login.index') }}">Mulai</a>
                             </div>
                         </li> 
                     </ul>        
