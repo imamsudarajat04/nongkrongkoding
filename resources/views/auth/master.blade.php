@@ -29,7 +29,7 @@
                         <input type="password" name="password" id="password" placeholder="Password" />
                     </div>
 
-                    <input type="submit" value="Masuk" class="btn solid" />
+                    <input type="submit" value="Masuk" id="masuk" class="btn solid" />
                     <a href="{{ route('landingPage.index') }}" class="btn">Batal</a>
 
                     {{-- <p class="social-text">Or Sign in with social platforms</p>
@@ -55,19 +55,20 @@
                 <form action="{{ route('register.post') }}" method="POST" class="sign-up-form">
                     @csrf
                     <h2 class="title">Daftar</h2>
-                    <div class="input-field">
-                        <i class="fas fa-user"></i>
-                        <input type="text" name="name" id="name" placeholder="Nama Lengkap" />
-                    </div>
+                    @if ($errors->any())
+                        <div class="alert alert-danger" role="alert">
+                            <h4 class="alert-heading">Peringatan !</h4>
+                            @foreach ($errors->all() as $error)
+                                <p class="mb-0">
+                                    - {{ $error }}
+                                </p>
+                            @endforeach
+                        </div>
+                    @endif
 
                     <div class="input-field">
                         <i class="fas fa-envelope"></i>
                         <input type="email" name="email" id="email" placeholder="Email" />
-                    </div>
-
-                    <div class="input-field">
-                        <i class="fas fa-phone"></i>
-                        <input type="text" name="telphone" id="telphone" placeholder="No. Telpon" />
                     </div>
 
                     <div class="input-field">
@@ -81,7 +82,7 @@
                             placeholder="Konfirmasi Password" />
                     </div>
 
-                    <input type="submit" class="btn" value="Daftar" />
+                    <input type="submit" class="btn" id="daftar" value="Daftar" />
 
                     {{-- <p class="social-text">Or Sign up with social platforms</p>
                         <div class="social-media">
