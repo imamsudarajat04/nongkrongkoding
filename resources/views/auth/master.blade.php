@@ -16,7 +16,7 @@
     <div class="container">
         <div class="forms-container">
             <div class="signin-signup">
-                <form action="{{ route('login.index') }}" method="GET" class="sign-in-form">
+                <form action="{{ route('postlogin.store') }}" method="POST" class="sign-in-form">
                     <h2 class="title">Masuk</h2>
                     @csrf
                     <div class="input-field">

@@ -11,6 +11,7 @@ Route::get('/', [LandingPageController::class, 'index'])->name('landingPage.inde
 
 //Auth Login
 Route::get('/login', [LoginController::class, 'index'])->name('login.index');
+Route::post('/postlogin', [LoginController::class, 'index'])->name('postlogin.store');
 Route::get('/logout', [LoginController::class, 'index'])->name('logout.index');
 
 //Testing Dashboard
