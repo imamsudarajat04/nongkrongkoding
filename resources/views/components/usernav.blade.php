@@ -18,11 +18,8 @@
                         <li class="scroll-to-section"><a href="#portfolio">Projects</a></li>
                         <li class="scroll-to-section"><a href="#blog">Blog</a></li>
                         <li class="scroll-to-section"><a href="#contact">Contact</a></li> 
-                        <li class="scroll-to-section">
-                            <div class="border-first-button">
-                                <a href="{{ route('login.index') }}">Mulai</a>
-                            </div>
-                        </li> 
+                        <li class="scroll-to-section"><a href="{{ route('login.index') }}">Mulai</a></li>
+                        <li class="scroll-to-section"></li> 
                     </ul>        
                     
                     <a class='menu-trigger'>
