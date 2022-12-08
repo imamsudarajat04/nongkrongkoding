@@ -16,9 +16,9 @@
     <div class="container">
         <div class="forms-container">
             <div class="signin-signup">
-                <form action="#" class="sign-in-form">
+                <form action="{{ route('postlogin.store') }}" method="POST" class="sign-in-form">
                     <h2 class="title">Masuk</h2>
-
+                    @csrf
                     <div class="input-field">
                         <i class="fas fa-user"></i>
                         <input type="text" name="email" id="email" placeholder="Email" />

@@ -17,6 +17,15 @@ class LoginController extends Controller
 
     public function store(LoginRequest $request)
     {
+        if (Auth::attempt($request->only('email', 'password'))) {
+            return redirect()->route('dashboard.index'); //redirect ke halaman dashboard
+        }
+        return redirect()->route('login.index')->with('error', 'Username atau Password anda Salah!');
+    }
 
+    public function logout()
+    {
+        Auth::logout();
+        return redirect()->route('login.index');
     }
 }
