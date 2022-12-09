@@ -24,8 +24,8 @@ class RegisterRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'     => 'required|regex:/^[\pL\s\-]+$/u',
-            'email'    => 'required|exists:users',
+            // 'name'     => 'required|regex:/^[\pL\s\-]+$/u',
+            'email'    => 'required|unique:users,email',
             'password' => 'required|same:confirm_password|min:5',
         ];
     }
@@ -33,10 +33,9 @@ class RegisterRequest extends FormRequest
     public function messages()
     {
         return [
-            'name.required'     => 'Nama tidak boleh kosong',
-            'name.regex'        => 'Nama hanya boleh huruf dan spasi',
+            // 'name.required'     => 'Nama tidak boleh kosong',
+            // 'name.regex'        => 'Nama hanya boleh huruf dan spasi',
             'email.required'    => 'Email tidak boleh kosong',
-            'email.exsits'      => 'Email sudah digunakan',
             'password.required' => 'Password tidak boleh kosong',
             'password.same'     => 'Konfirmasi password tidak sesuai',
             'password.min'      => 'Minimal password 5 digit',

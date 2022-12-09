@@ -18,7 +18,11 @@
                         <li class="scroll-to-section"><a href="#portfolio">Projects</a></li>
                         <li class="scroll-to-section"><a href="#blog">Blog</a></li>
                         <li class="scroll-to-section"><a href="#contact">Contact</a></li> 
-                        <li class="scroll-to-section"><a href="{{ route('login.index') }}">Mulai</a></li>
+                        @auth
+                            <li class="scroll-to-section"><a href="{!! route('dashboard.index') !!}">Dashboard</a></li>
+                        @else
+                            <li class="scroll-to-section"><a href="{{ route('login.index') }}">Mulai</a></li>
+                        @endauth
                         <li class="scroll-to-section"></li> 
                     </ul>        
                     

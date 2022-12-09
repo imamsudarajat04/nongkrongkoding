@@ -11,14 +11,12 @@ Route::get('/', [LandingPageController::class, 'index'])->name('landingPage.inde
 
 //Auth Login
 Route::get('/login', [LoginController::class, 'index'])->name('login.index');
-Route::post('/postlogin', [LoginController::class, 'index'])->name('postlogin.store');
-Route::get('/logout', [LoginController::class, 'index'])->name('logout.index');
-
-//Testing Dashboard
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
-// Route::group(['middleware' => ['auth']], function() {
-
-//     //Dashboard
-//     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
-// });
+Route::post('/postlogin', [LoginController::class, 'store'])->name('postlogin.store');
 Route::post('/register/post', [RegisterController::class, 'store'])->name('register.post');
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+
+Route::group(['middleware' => ['auth']], function() {
+
+    //Dashboard
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
+});

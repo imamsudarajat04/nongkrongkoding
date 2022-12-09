@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Requests\RegisterRequest;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class RegisterController extends Controller
 {
@@ -16,6 +17,8 @@ class RegisterController extends Controller
         $data['password'] = Hash::make($request->password);
 
         User::create($data);
-        return redirect()->route('register.post')->with('success', 'Data berhasil ditambahkan');
+
+        Alert::success('', 'Berhasil Daftar!');
+        return redirect()->route('login.index');
     }
 }
