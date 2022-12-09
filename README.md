@@ -3,8 +3,8 @@
 
 ## Fitur Superadmin
 
-- [-] Login 
-- [-] Dashboard
+- [x] Login 
+- [x] Dashboard
 - [-] Input User
 - [-] Input Permission
 - [-] Input Role
@@ -17,8 +17,9 @@
 
 ## Fitur User
 
-- [-] Login Untuk User
-- [-] Dashboard User
+- [x] Login Untuk User
+- [x] Register untuk User
+- [x] Dashboard User
 - [-] Update Profile User
 - [-] Nonton Materi
 - [-] Pembayaran (Soon)
