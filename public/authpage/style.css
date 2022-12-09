@@ -11,6 +11,24 @@ input {
 font-family: "Poppins", sans-serif;
 }
 
+.alert-danger{
+    color:#721c24;
+    background-color:#f8d7da;
+    border-color:#f5c6cb
+}
+
+.alert{
+    position:relative;
+    padding:.75rem 1.25rem;
+    margin-bottom:1rem;
+    border:1px solid transparent;
+    border-radius:.25rem
+}
+.alert-danger hr{border-top-color:#f1b0b7}
+.mb-0,.my-0{margin-bottom:0!important}
+.alert-heading{color:inherit}
+
+
 a{
     text-decoration: none;
     text-align: center;
@@ -285,6 +303,7 @@ pointer-events: all;
     min-height: 800px;
     height: 100vh;
     }
+
     .signin-signup {
     width: 100%;
     top: 95%;
