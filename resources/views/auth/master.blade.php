@@ -17,8 +17,18 @@
         <div class="forms-container">
             <div class="signin-signup">
                 <form action="{{ route('postlogin.store') }}" method="POST" class="sign-in-form">
-                    <h2 class="title">Masuk</h2>
                     @csrf
+                    <h2 class="title">Masuk</h2>
+                    @if ($errors->any())
+                        <div class="alert alert-danger" role="alert">
+                            <h4 class="alert-heading">Peringatan !</h4>
+                            @foreach ($errors->all() as $error)
+                                <p class="mb-0">
+                                    - {{ $error }}
+                                </p>
+                            @endforeach
+                        </div>
+                    @endif
                     <div class="input-field">
                         <i class="fas fa-user"></i>
                         <input type="text" name="email" id="email" placeholder="Email" />

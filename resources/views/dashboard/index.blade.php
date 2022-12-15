@@ -13,9 +13,10 @@
                         <div class="card-body">
                                 <h5 class="card-title text-primary">Selamat Datang {!! (Auth::user()->name == '') ? ' ' : Auth::user()->name !!} ! 🎉</h5>
                                 <p class="mb-4">
-                                    Mari lihat perkembangan pengguna aplikasi pada hari ini
+                                    Tambah konten baru dan video agar pengguna lebih tertarik dengan konten yang beragam
                                 </p>
-                            <a href="" class="btn btn-sm btn-outline-primary">Lihat Pengguna</a>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Lihat Video</a>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Tambah Video</a>
                         </div>
                     </div>
 
@@ -54,7 +55,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <span>Sales</span>
+                            <span>Pengguna</span>
                             <h3 class="card-title text-nowrap mb-1">$4,679</h3>
                             <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i> +28.42%</small>
                         </div>
