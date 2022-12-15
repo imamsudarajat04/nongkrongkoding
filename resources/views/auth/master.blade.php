@@ -16,7 +16,7 @@
     <div class="container">
         <div class="forms-container">
             <div class="signin-signup">
-                <form action="{{ route('postlogin.store') }}" method="POST" class="sign-in-form">
+                <form action="{{ route('postlogin.store') }}" method="POST" class="sign-in-form" id="form-masuk">
                     @csrf
                     <h2 class="title">Masuk</h2>
                     @if ($errors->any())
@@ -62,7 +62,7 @@
                         </div> --}}
                 </form>
 
-                <form action="{{ route('register.post') }}" method="POST" class="sign-up-form">
+                <form action="{{ route('register.post') }}" method="POST" class="sign-up-form" id="form-daftar">
                     @csrf
                     <h2 class="title">Daftar</h2>
                     @if ($errors->any())
