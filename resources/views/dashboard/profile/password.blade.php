@@ -25,43 +25,39 @@
                 <form id="formAccountSettings" method="POST" onsubmit="return false">
                   <div class="row">
                     <div class="mb-3 col-md-12">
-                      <label for="firstName" class="form-label">Nama Lengkap</label>
+                      <label for="firstName" class="form-label">Password Lama</label>
                       <input
                         class="form-control"
-                        type="text"
-                        id="firstName"
-                        name="firstName"
-                        value="{!! (Auth::user()->name == '') ? ' ' : Auth::user()->name !!}"
+                        type="password"
                         autofocus
+                        placeholder="Masukkan Password Lama"
                       />
                     </div>
                     <div class="mb-3 col-md-6">
-                      <label for="email" class="form-label">Alamat E-mail</label>
+                      <label for="email" class="form-label">Password Baru</label>
                       <input
-                        disabled
                         class="form-control"
-                        type="text"
+                        type="password"
                         id="email"
                         name="email"
-                        value="{{ Auth::user()->email }}"
+                        placeholder="Masukkan Password Baru"
                       />
                     </div>
                     <div class="mb-3 col-md-6">
-                      <label class="form-label" for="phoneNumber">Nomor Handphone</label>
+                      <label class="form-label" for="phoneNumber">Konfirmasi Password Baru</label>
                       <div class="input-group input-group-merge">
-                        <span class="input-group-text">ID (+62)</span>
                         <input
-                          type="text"
+                          type="password"
                           id="phoneNumber"
                           name="phoneNumber"
                           class="form-control"
-                          placeholder="8 xxxx xxxx"
+                          placeholder="Masukkan Konfirmasi Password Baru"
                         />
                       </div>
                     </div>
                   </div>
                   <div class="mt-2">
-                    <button type="submit" class="btn btn-primary me-2">Simpan Data</button>
+                    <button type="submit" class="btn btn-primary me-2">Ubah</button>
                     <a href="{{ route('dashboard.index') }}" class="btn btn-outline-secondary">Batal</a>
                   </div>
                 </form>
