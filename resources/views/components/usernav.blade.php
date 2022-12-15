@@ -3,10 +3,7 @@
         <div class="row">
             <div class="col-12">
                 <nav class="main-nav">
-
-                    {{-- <a href="index.html" class="logo">
-                        <img src="{{ asset('landing/assets/images/logo-v3.png') }}" alt="">
-                    </a> --}}
+                    
                     <a href="{{ route('landingPage.index') }}" class="logo">
                         <img src="{{ asset('admin/assets/img/logo/4k-edit.png') }}" alt="">
                     </a>
