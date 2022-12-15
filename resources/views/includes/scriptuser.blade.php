@@ -4,3 +4,4 @@
 <script src="{{ asset('landing/assets/js/animation.js') }}"></script>
 <script src="{{ asset('landing/assets/js/imagesloaded.js') }}"></script>
 <script src="{{ asset('landing/assets/js/custom.js') }}"></script>
+@stack('customjs')
