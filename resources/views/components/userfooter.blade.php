@@ -1,10 +1,19 @@
 <footer>
     <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <p>Copyright © 2022 DigiMedia Co., Ltd. All Rights Reserved. 
-          <br>Design: <a href="https://templatemo.com" target="_parent" title="free css templates">TemplateMo</a></p>
+        <div class="row">
+            <div class="col-lg-12">
+                <p>
+                    Copyright &copy;
+                    <span id="year"></span>
+                    - NongkrongKoding • All Rights Reserved
+                </p>
+            </div>
         </div>
-      </div>
     </div>
-  </footer>
+</footer>
+
+@push('customjs')
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
+@endpush
