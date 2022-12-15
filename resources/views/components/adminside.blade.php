@@ -56,12 +56,6 @@
             <ul class="menu-sub">
                 <li class="menu-item">
                     <a href="pages-misc-error.html" class="menu-link">
-                        <div data-i18n="Video">Total Video</div>
-                    </a>
-                </li>
-
-                <li class="menu-item">
-                    <a href="pages-misc-error.html" class="menu-link">
                         <div data-i18n="Video">Kategori Video</div>
                     </a>
                 </li>
