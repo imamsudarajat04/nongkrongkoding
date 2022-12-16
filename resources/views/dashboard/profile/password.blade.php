@@ -1,4 +1,4 @@
-@extends('layout.dashboard')
+@extends('dashboard.layout.dashboard')
 
 @section('breadOld', 'Admin')
 @section('breadNow', 'Password')

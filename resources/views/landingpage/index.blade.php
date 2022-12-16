@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-    @include('includes.styleuser')
+    @include('landingpage.includes.stylelanding')
 </head>
 
 <body>
@@ -39,7 +39,7 @@
         </div>
     </div>
 
-    @include('components.usernav')
+    @include('landingpage.components.landingnavbar')
 
     <!-- TOP DATA PAGE -->
     <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
@@ -801,8 +801,8 @@
     </div>
 
     <!-- COMPONENT && INCLUDES FOOTER & SCRIPT -->
-    @include('components.userfooter')
-    @include('includes.scriptuser')
+    @include('landingpage.components.landingfooter')
+    @include('landingpage.includes.scriptlanding')
 </body>
 
 </html>
