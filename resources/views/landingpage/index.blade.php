@@ -195,7 +195,7 @@
                                         <div class="first-thumb active">
                                             <div class="thumb">
                                                 <span class="icon"><img
-                                                        src="{{ asset('landing/assets/images/service-icon-01.png') }}"
+                                                        src="{{ asset('landing/assets/images/icons8-imac-settings-100.png') }}"
                                                         alt=""></span>
                                                 <small>Full Stack Developer</small>
                                             </div>
@@ -204,7 +204,7 @@
                                         <div>
                                             <div class="thumb">
                                                 <span class="icon"><img
-                                                        src="{{ asset('landing/assets/images/service-icon-02.png') }}"
+                                                        src="{{ asset('landing/assets/images/icons8-programming-64.png') }}"
                                                         alt=""></span>
                                                 <small>Front End Developer</small>
                                             </div>
@@ -213,7 +213,7 @@
                                         <div>
                                             <div class="thumb">
                                                 <span class="icon"><img
-                                                        src="{{ asset('landing/assets/images/service-icon-03.png') }}"
+                                                        src="{{ asset('landing/assets/images/icons8-backend-development.gif') }}"
                                                         alt=""></span>
                                                 <small>Back End Developer</small>
                                             </div>
@@ -222,7 +222,7 @@
                                         <div>
                                             <div class="thumb">
                                                 <span class="icon"><img
-                                                        src="{{ asset('landing/assets/images/service-icon-04.png') }}"
+                                                        src="{{ asset('landing/assets/images/icons8-security-98.png') }}"
                                                         alt=""></span>
                                                 <small>Cyber <br> Security</small>
                                             </div>
@@ -231,7 +231,7 @@
                                         <div class="last-thumb">
                                             <div class="thumb">
                                                 <span class="icon"><img
-                                                        src="{{ asset('landing/assets/images/javascript.png') }}"
+                                                        src="{{ asset('landing/assets/images/icons8-javascript.gif') }}"
                                                         alt=""></span>
                                                 <small>Bahasa <br> Javascript</small>
                                             </div>
@@ -330,11 +330,6 @@
                                                                         Laravel</span>
                                                                     <span><i class="fa fa-check"></i> Git Hub</span>
                                                                     <span><i class="fa fa-check"></i> My SQL</span>
-                                                                    {{-- <span><i class="fa fa-check"></i> Data Info</span>
-                                                                    <span><i class="fa fa-check"></i> SEO
-                                                                        Analysis</span>
-                                                                    <span><i class="fa fa-check"></i> Optimized
-                                                                        Template</span> --}}
                                                                 </div>
                                                                 <p>Jadilah Backend Developer yang Handal!</p>
                                                             </div>
@@ -404,11 +399,6 @@
                                                                     <span><i class="fa fa-check"></i>Struktur Js</span>
                                                                     <span><i class="fa fa-check"></i>Membuat Portofolio
                                                                         dengan Js</span>
-                                                                    {{-- <span><i class="fa fa-check"></i></span>
-                                                                    <span><i class="fa fa-check"></i> SEO
-                                                                        Analysis</span>
-                                                                    <span><i class="fa fa-check"></i> Optimized
-                                                                        Template</span> --}}
                                                                 </div>
                                                                 <p>Jangan Menyerah sampai di sini teman !</p>
                                                             </div>
@@ -446,31 +436,6 @@
                         <div class="line-dec"></div>
                     </div>
                 </div>
-
-                {{-- <div class="col-lg-8 offset-lg-2  wow fadeIn animated" data-wow-duration="1s" data-wow-delay="0.8s"
-                    style="visibility: visible;-webkit-animation-duration: 1s; -moz-animation-duration: 1s; animation-duration: 1s;-webkit-animation-delay: 0.8s; -moz-animation-delay: 0.8s; animation-delay: 0.8s;">
-                    <form id="search" action="#" method="GET">
-                        <div class="row">
-                            <div class="col-lg-4 col-sm-4">
-                                <fieldset>
-                                    <input type="web" name="web" class="website"
-                                        placeholder="Pertanyaan kamu.." autocomplete="on" required="">
-                                </fieldset>
-                            </div>
-                            <div class="col-lg-4 col-sm-4">
-                                <fieldset>
-                                    <input type="address" name="address" class="email"
-                                        placeholder="Alamat Email kamu .." autocomplete="on" required="">
-                                </fieldset>
-                            </div>
-                            <div class="col-lg-4 col-sm-4">
-                                <fieldset>
-                                    <button type="submit" class="main-button">Kirim</button>
-                                </fieldset>
-                            </div>
-                        </div>
-                    </form>
-                </div> --}}
             </div>
         </div>
     </div>
@@ -493,7 +458,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="loop owl-carousel">
-                        @foreach ($kelas as $k)    
+                        @foreach ($kelas as $k)
                             <div class="item">
                                 <a href="#">
                                     <div class="portfolio-item">
