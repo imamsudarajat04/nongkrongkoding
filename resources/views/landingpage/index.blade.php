@@ -493,85 +493,23 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="loop owl-carousel">
-                        <div class="item">
-                            <a href="#">
-                                <div class="portfolio-item">
-                                    <div class="thumb">
-                                        <img src="{{ asset('landing/assets/images/portfolio-01.jpg') }}"
-                                            alt="">
-                                    </div>
+                        @foreach ($kelas as $k)    
+                            <div class="item">
+                                <a href="#">
+                                    <div class="portfolio-item">
+                                        <div class="thumb">
+                                            <img src="{{ asset('landing/assets/images/portfolio-01.jpg') }}"
+                                                alt="">
+                                        </div>
 
-                                    <div class="down-content">
-                                        <h4>Full-stack Developer</h4>
-                                        <span>Marketing</span>
+                                        <div class="down-content">
+                                            <h4>{!! $k->name !!}</h4>
+                                            <span>Rp. {!! number_format($k->price) !!}</span>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="item">
-                            <a href="#">
-                                <div class="portfolio-item">
-                                    <div class="thumb">
-                                        <img src="{{ asset('landing/assets/images/portfolio-01.jpg') }}"
-                                            alt="">
-                                    </div>
-
-                                    <div class="down-content">
-                                        <h4>Front-end Developer</h4>
-                                        {{-- <span>Marketing</span> --}}
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="item">
-                            <a href="#">
-                                <div class="portfolio-item">
-                                    <div class="thumb">
-                                        <img src="{{ asset('landing/assets/images/portfolio-02.jpg') }}"
-                                            alt="">
-                                    </div>
-
-                                    <div class="down-content">
-                                        <h4>Back-end Developer</h4>
-                                        {{-- <span>Marketing</span> --}}
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="item">
-                            <a href="#">
-                                <div class="portfolio-item">
-                                    <div class="thumb">
-                                        <img src="{{ asset('landing/assets/images/portfolio-03.jpg') }}"
-                                            alt="">
-                                    </div>
-
-                                    <div class="down-content">
-                                        <h4>Laravel</h4>
-                                        {{-- <span>Marketing</span> --}}
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="item">
-                            <a href="#">
-                                <div class="portfolio-item">
-                                    <div class="thumb">
-                                        <img src="{{ asset('landing/assets/images/portfolio-04.jpg') }}"
-                                            alt="">
-                                    </div>
-
-                                    <div class="down-content">
-                                        <h4>Java Script</h4>
-                                        {{-- <span>Marketing</span> --}}
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                                </a>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
