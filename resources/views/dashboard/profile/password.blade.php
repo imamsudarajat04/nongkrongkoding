@@ -22,38 +22,54 @@
               <h5 class="card-header">Ganti Password</h5>
               <hr class="my-0" />
               <div class="card-body">
-                <form id="formAccountSettings" method="POST" onsubmit="return false">
+                <form id="formAccountSettings" method="POST" action="{!! route('admin.updatePassword', Auth::user()->id) !!}">
+                  @csrf
+                  @method('PUT')
                   <div class="row">
                     <div class="mb-3 col-md-12">
                       <label for="firstName" class="form-label">Password Lama</label>
                       <input
-                        class="form-control"
+                        class="form-control @error('oldPassword') is-invalid @enderror"
                         type="password"
                         autofocus
                         placeholder="Masukkan Password Lama"
-                      />
+                        name="oldPassword"
+                        id="oldPassword" />
+                      @error('oldPassword')
+                          <div class="text-danger">
+                            {{ $message }}
+                          </div>
+                      @enderror
                     </div>
                     <div class="mb-3 col-md-6">
                       <label for="email" class="form-label">Password Baru</label>
                       <input
-                        class="form-control"
+                        class="form-control @error('password') is-invalid @enderror"
                         type="password"
-                        id="email"
-                        name="email"
-                        placeholder="Masukkan Password Baru"
-                      />
+                        id="password"
+                        name="password"
+                        placeholder="Masukkan Password Baru" />
+                      @error('password')
+                          <div class="text-danger">
+                            {!! $message !!}
+                          </div>
+                      @enderror
                     </div>
                     <div class="mb-3 col-md-6">
-                      <label class="form-label" for="phoneNumber">Konfirmasi Password Baru</label>
+                      <label class="form-label" for="confirmPassword">Konfirmasi Password Baru</label>
                       <div class="input-group input-group-merge">
                         <input
                           type="password"
-                          id="phoneNumber"
-                          name="phoneNumber"
-                          class="form-control"
-                          placeholder="Masukkan Konfirmasi Password Baru"
-                        />
+                          id="confirmPassword"
+                          name="confirmPassword"
+                          class="form-control @error('confirmPassword') is-invalid @enderror"
+                          placeholder="Masukkan Konfirmasi Password Baru" />
                       </div>
+                      @error('confirmPassword')
+                        <div class="text-danger">
+                          {!! $message !!}
+                        </div>
+                      @enderror
                     </div>
                   </div>
                   <div class="mt-2">
