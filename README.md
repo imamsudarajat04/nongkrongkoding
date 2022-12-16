@@ -5,6 +5,8 @@
 
 - [x] Login 
 - [x] Dashboard
+- [x] Update Profile User
+- [x] Ganti Password
 - [-] Input User
 - [-] Input Permission
 - [-] Input Role
@@ -20,7 +22,8 @@
 - [x] Login Untuk User
 - [x] Register untuk User
 - [x] Dashboard User
-- [-] Update Profile User
+- [x] Update Profile User
+- [x] Ganti Password
 - [-] Nonton Materi
 - [-] Pembayaran (Soon)
 - [-] Kode Reveral (Soon)
