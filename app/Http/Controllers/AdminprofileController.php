@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Arr;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use RealRashid\SweetAlert\Facades\Alert;
+use App\Http\Requests\UpdateProfileRequest;
 
 class AdminprofileController extends Controller
 {
@@ -17,9 +21,18 @@ class AdminprofileController extends Controller
         return view('dashboard.profile.password');
     }
 
-    public function updateProfile($id, Request $request)
+    public function updateProfile($id, UpdateProfileRequest $request)
     {
-        $data = User::findOrFail($id);
-        dd($request->all());
+        $data = $request->all();
+        $cek = User::findOrFail($id);
+        
+        if($request->hasFile('avatar')) {
+            $data['avatar'] = $request->file('avatar')->store('avatar', 'public');
+        }
+
+        $cek->update($data);
+
+        Alert::success('', 'Berhasil ubah profil!');
+        return redirect()->route('admin.profile');
     }
 }

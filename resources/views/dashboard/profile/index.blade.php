@@ -22,7 +22,8 @@
             <h5 class="card-header">Detail Profil</h5>
             <div class="card-body">
                 <div class="d-flex align-items-start align-items-sm-center gap-4">
-                    <img src="{{asset('admin/assets/img/avatars/1.png')}}" alt="user-avatar"
+                    {{-- <img src="{{ asset('admin/assets/img/avatars/1.png') }}" alt="user-avatar" --}}
+                    <img src="{!! Storage::exists('public/' . Auth::user()->avatar) && Auth::user()->avatar ? Storage::url(Auth::user()->avatar) : asset('admin/assets/img/avatars/1.png') !!}" alt="user-avatar"
                         class="d-block rounded"
                         height="100"
                         width="100"
@@ -36,7 +37,7 @@
                                 <i class="bx bx-upload d-block d-sm-none"></i>
                                 <input type="file" id="upload" name="avatar" class="account-file-input" hidden accept="image/png, image/jpeg" />
                             </label>
-                            <p class="text-muted mb-0">Format File Harus JPG, GIF Atau PNG. Ukuran Maksimum 800KB</p>
+                            <p class="text-muted mb-0">Format File Harus JPG, GIF Atau PNG. Ukuran Maksimum 3MB</p>
                         </div>
                 </div>
             </div>
@@ -45,7 +46,7 @@
                 <div class="row">
                     <div class="mb-3 col-md-12">
                         <label for="firstName" class="form-label">Nama Lengkap</label>
-                        <input class="form-control @error('name') is-invalid @enderror" type="text" value="{!! (Auth::user()->name == '') ? ' ' : Auth::user()->name !!}" name="name"/>
+                        <input class="form-control @error('name') is-invalid @enderror" type="text" value="{!! (Auth::user()->name == '') ? 'Anonym' : Auth::user()->name !!}" name="name"/>
                         @error('name')
                             <div class="text-danger">
                                 {{ $message }}
@@ -56,7 +57,7 @@
                     <div class="mb-3 col-md-6">
                         <label for="email" class="form-label">Alamat E-mail</label>
                         <input
-                            disabled
+                            readonly
                             class="form-control"
                             type="email"
                             id="email"
@@ -69,13 +70,13 @@
                         <label class="form-label" for="phoneNumber">Nomor Handphone</label>
                         <div class="input-group input-group-merge">
                             <span class="input-group-text">ID (+62)</span>
-                            <input type="text" id="phoneNumber" name="telphone" class="form-control @error('telphone') is-invalid @enderror" placeholder="8 xxxx xxxx" />
-                            @error('telphone')
-                                <div class="text-danger">
-                                    {{ $message }}
-                                </div>
-                            @enderror
+                            <input type="text" id="phoneNumber" name="telphone" class="form-control @error('telphone') is-invalid @enderror" placeholder="8 xxxx xxxx" value="{!! Auth::user()->telphone !!}" />
                         </div>
+                        @error('telphone')
+                            <div class="text-danger">
+                                {{ $message }}
+                            </div>
+                        @enderror
                     </div>
                 </div>
                 <div class="mt-2">

@@ -11,7 +11,7 @@
                 <div class="d-flex align-items-end row">
                     <div class="col-sm-7">
                         <div class="card-body">
-                                <h5 class="card-title text-primary">Selamat Datang {!! (Auth::user()->name == '') ? ' ' : Auth::user()->name !!} ! 🎉</h5>
+                                <h5 class="card-title text-primary">Selamat Datang {!! (Auth::user()->name == '') ? 'Anonym' : Auth::user()->name !!} ! 🎉</h5>
                                 <p class="mb-4">
                                     Tambah konten baru dan video agar pengguna lebih tertarik dengan konten yang beragam
                                 </p>
