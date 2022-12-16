@@ -213,7 +213,7 @@
                                         <div>
                                             <div class="thumb">
                                                 <span class="icon"><img
-                                                        src="{{ asset('landing/assets/images/service-icon-03.png') }}"
+                                                        src="{{ asset('landing/assets/images/icons8-backend-development.gif') }}"
                                                         alt=""></span>
                                                 <small>Back End Developer</small>
                                             </div>
@@ -222,7 +222,7 @@
                                         <div>
                                             <div class="thumb">
                                                 <span class="icon"><img
-                                                        src="{{ asset('landing/assets/images/service-icon-04.png') }}"
+                                                        src="{{ asset('landing/assets/images/icons8-cyber-security-64.png') }}"
                                                         alt=""></span>
                                                 <small>Cyber <br> Security</small>
                                             </div>
