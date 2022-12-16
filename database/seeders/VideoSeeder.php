@@ -20,6 +20,7 @@ class VideoSeeder extends Seeder
             'description'      => 'Lorem Ipsum',
             'linkYoutube'      => 'www.youtube.com/',
             'categoryvideo_id' => 1,
+            'price'            => 120000,
         ]);
 
         \App\Models\Videos::create([
@@ -28,6 +29,7 @@ class VideoSeeder extends Seeder
             'description'      => 'Lorem Ipsum',
             'linkYoutube'      => 'www.youtube.com/',
             'categoryvideo_id' => 2,
+            'price'            => 155000,
         ]);
 
         \App\Models\Videos::create([
@@ -36,6 +38,7 @@ class VideoSeeder extends Seeder
             'description'      => 'Lorem Ipsum',
             'linkYoutube'      => 'www.youtube.com/',
             'categoryvideo_id' => 3,
+            'price'            => 685000,
         ]);
 
         \App\Models\Videos::create([
@@ -44,6 +47,7 @@ class VideoSeeder extends Seeder
             'description'      => 'Lorem Ipsum',
             'linkYoutube'      => 'www.youtube.com/',
             'categoryvideo_id' => 4,
+            'price'            => 90900,
         ]);
 
         \App\Models\Videos::create([
@@ -52,6 +56,7 @@ class VideoSeeder extends Seeder
             'description'      => 'Lorem Ipsum',
             'linkYoutube'      => 'www.youtube.com/',
             'categoryvideo_id' => 5,
+            'price'            => 345000,
         ]);
     }
 }

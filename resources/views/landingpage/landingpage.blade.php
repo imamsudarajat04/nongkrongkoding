@@ -367,7 +367,7 @@
                                                                         Testing</span>
                                                                     <span><i class="fa fa-check"></i>Security
                                                                         Hacking</span>
-                                                                    <span><i class="fa fa-check"></i>Network
+                                                                    <span><i class="fa fa-check"></i>Networking
                                                                         Security</span>
                                                                     <span><i class="fa fa-check"></i>Kali Linux</span>
                                                                     <span><i class="fa fa-check"></i>Information
@@ -503,7 +503,7 @@
 
                                     <div class="down-content">
                                         <h4>Full-stack Developer</h4>
-                                        {{-- <span>Marketing</span> --}}
+                                        <span>Marketing</span>
                                     </div>
                                 </div>
                             </a>

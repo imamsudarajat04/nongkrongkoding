@@ -17,6 +17,7 @@ class Videos extends Model
         'description',
         'linkYoutube',
         'categoryvideo_id',
+        'price'
     ];
 
     public function categoryVideo()
