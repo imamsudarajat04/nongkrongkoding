@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\CategoryVideo;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -20,7 +22,15 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+        
+        $this->call([
+                CategoryVideoSeeder::class,
+                VideoSeeder::class,
+                Permission::class,
+        ]);
 
-        $this->call(Permission::class);
+        // $this->call(CategoryVideoSeeder::class);
+        // $this->call(VideoSeeder::class);
+        // $this->call(Permission::class);
     }
 }

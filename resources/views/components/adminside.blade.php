@@ -15,7 +15,7 @@
         <li class="menu-header small text-uppercase">
             <span class="menu-header-text">Main</span>
         </li>
-        <li class="menu-item">
+        <li class="menu-item @yield('dashboard')">
             <a href="{{ route('dashboard.index') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Dashboard</div>

@@ -1,5 +1,6 @@
 @extends('layouts.dashboard')
 
+@section('dashboard', 'active')
 @section('breadOld', 'Admin')
 @section('breadNow', 'Dashboard')
 @section('adminTitle', 'Dashboard')
