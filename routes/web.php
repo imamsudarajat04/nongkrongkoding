@@ -1,11 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\LandingPageController;
-use App\Http\Controllers\AdminprofileController;
+use App\Http\Controllers\Admin\AdminprofileController;
 
 //Landing Page
 Route::get('/', [LandingPageController::class, 'index'])->name('landingPage.index');

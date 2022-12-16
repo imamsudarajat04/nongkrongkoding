@@ -49,7 +49,7 @@
 
         <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-cube-alt"></i>
+                <i class="menu-icon tf-icons bx bxs-videos"></i>
                 <div data-i18n="Misc">Video</div>
             </a>
             <ul class="menu-sub">
