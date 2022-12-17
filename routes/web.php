@@ -18,7 +18,7 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::group(['middleware' => ['auth']], function() {
 
-    //Dashboard
+    //Dashboard & Settings(Admin)
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
     Route::get('/profile', [AdminprofileController::class, 'index'])->name('admin.profile');
     Route::put('/updateProfile/{id}', [AdminprofileController::class, 'updateProfile'])->name('admin.updateProfile');
