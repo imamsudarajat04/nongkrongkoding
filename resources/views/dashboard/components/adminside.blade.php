@@ -70,24 +70,20 @@
         </li>
 
         <!-- HAK AKSES DAN JABATAN -->
-        <li class="menu-header small text-uppercase"><span class="menu-header-text">Hak-akses</span></li>
+        <li class="menu-header small text-uppercase"><span class="menu-header-text">Akses & Jabatan</span></li>
+        <!-- JABATAN -->
+        <li class="menu-item @yield('jabatan')">
+            <a href="#" class="menu-link">
+                <i class="menu-icon tf-icons bx bxs-user-badge"></i>
+                <div data-i18n="User interface">Jabatan</div>
+            </a>
+        </li>
+        <!-- HAK AKSES -->
         <li class="menu-item @yield('hak-akses')">
-            <a href="javascript:void(0)" class="menu-link menu-toggle">
+            <a href="#" class="menu-link">
                 <i class="menu-icon tf-icons bx bxs-user-detail"></i>
                 <div data-i18n="User interface">Hak-akses</div>
             </a>
-            
-            <ul class="menu-sub">
-                <li class="menu-item">
-                    <a href="ui-accordion.html" class="menu-link">
-                        <div data-i18n="Accordion">Admin</div>
-                    </a>
-                    
-                    <a href="ui-accordion.html" class="menu-link">
-                        <div data-i18n="Accordion">Pengguna</div>
-                    </a>
-                </li>
-            </ul>
         </li>
 
         <!-- PENGATURAN KOMPONEN HALAMAN USER&DASHBOARD -->
@@ -101,7 +97,7 @@
             <ul class="menu-sub">
                 <li class="menu-item">
                     <a href="ui-accordion.html" class="menu-link">
-                        <div data-i18n="Accordion">Footer(dashboard)</div>
+                        <div data-i18n="Accordion">Footer(landingPage)</div>
                     </a>
 
                     <a href="ui-accordion.html" class="menu-link">
