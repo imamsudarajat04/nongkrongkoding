@@ -213,7 +213,7 @@
                                         <div>
                                             <div class="thumb">
                                                 <span class="icon"><img
-                                                        src="{{ asset('landing/assets/images/icons8-backend-development.gif') }}"
+                                                        src="{{ asset('landing/assets/images/icons8-backend-development-96.png') }}"
                                                         alt=""></span>
                                                 <small>Back End Developer</small>
                                             </div>
@@ -231,7 +231,7 @@
                                         <div class="last-thumb">
                                             <div class="thumb">
                                                 <span class="icon"><img
-                                                        src="{{ asset('landing/assets/images/icons8-javascript.gif') }}"
+                                                        src="{{ asset('landing/assets/images/javascript.png') }}"
                                                         alt=""></span>
                                                 <small>Bahasa <br> Javascript</small>
                                             </div>
@@ -561,7 +561,7 @@
                                         <span class="category">Dasar Programming</span>
                                         <span class="date">24 September 2022</span>
                                         <a href="#">
-                                            <h4>Belajar Programming harus mulai dari mana?</h4>
+                                            <h4>Bingung harus mulai dari mana?</h4>
                                         </a>
                                         <p>Jawaban singkatnya: mulai dari HTML. Karena HTML adalah inti dari seluruh
                                             halaman web. Sangat mustahil untuk membuat website tanpa memiliki dasar
