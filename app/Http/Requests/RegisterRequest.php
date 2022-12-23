@@ -26,7 +26,8 @@ class RegisterRequest extends FormRequest
         return [
             // 'name'     => 'required|regex:/^[\pL\s\-]+$/u',
             'email'    => 'required|unique:users,email',
-            'password' => 'required|same:confirm_password|min:5',
+            'password' => ['required', 'regex:/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/', 'same:confirm_password'],
+            // 'password' => 'required|same:confirm_password|min:5',
         ];
     }
 
@@ -37,8 +38,10 @@ class RegisterRequest extends FormRequest
             // 'name.regex'        => 'Nama hanya boleh huruf dan spasi',
             'email.required'    => 'Email tidak boleh kosong',
             'password.required' => 'Password tidak boleh kosong',
+            'password.regex'    => 'Format Password tidak sesuai',
             'password.same'     => 'Konfirmasi password tidak sesuai',
-            'password.min'      => 'Minimal password 5 digit',
         ];
     }
 }
+
+
