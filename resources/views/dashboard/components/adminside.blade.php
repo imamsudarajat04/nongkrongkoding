@@ -36,13 +36,13 @@
 
             <ul class="menu-sub">
                 <li class="menu-item">
-                    <a href="pages-account-settings-account.html" class="menu-link">
+                    <a href="#" class="menu-link">
                         <div data-i18n="Account">Admin</div>
                     </a>
                 </li>
 
                 <li class="menu-item">
-                    <a href="pages-account-settings-notifications.html" class="menu-link">
+                    <a href="#" class="menu-link">
                         <div data-i18n="Notifications">Pengguna</div>
                     </a>
                 </li>
@@ -50,19 +50,19 @@
         </li>
         <!-- VIDEO, KATEGORI SERTA TAMBAH VIDEO -->
         <li class="menu-item @yield('video')">
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
+            <a href="#" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bxs-videos"></i>
                 <div data-i18n="Misc">Video</div>
             </a>
             <ul class="menu-sub">
                 <li class="menu-item">
-                    <a href="pages-misc-error.html" class="menu-link">
+                    <a href="{{ route('video.index') }}" class="menu-link">
                         <div data-i18n="Video">Kategori Video</div>
                     </a>
                 </li>
 
                 <li class="menu-item">
-                    <a href="pages-misc-error.html" class="menu-link">
+                    <a href="#" class="menu-link">
                         <div data-i18n="Video">Tambah Video</div>
                     </a>
                 </li>
@@ -96,11 +96,11 @@
             
             <ul class="menu-sub">
                 <li class="menu-item">
-                    <a href="ui-accordion.html" class="menu-link">
+                    <a href="#" class="menu-link">
                         <div data-i18n="Accordion">Footer(landingPage)</div>
                     </a>
 
-                    <a href="ui-accordion.html" class="menu-link">
+                    <a href="#" class="menu-link">
                         <div data-i18n="Accordion">Bodi</div>
                     </a>
                 </li>
