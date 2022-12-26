@@ -7,6 +7,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\AdminprofileController;
+use App\Http\Controllers\Admin\VideoController;
 
 //Landing Page
 Route::get('/', [LandingPageController::class, 'index'])->name('landingPage.index');
@@ -28,5 +29,8 @@ Route::group(['middleware' => ['auth']], function() {
 
     //Hak Akses
     Route::resource('/hak-akses', PermissionController::class);
+
+    //Video
+    Route::get('/video/category', [VideoController::class, 'index'])->name('video.index');
 
 });
