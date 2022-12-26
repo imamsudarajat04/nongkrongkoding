@@ -9,6 +9,9 @@ href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400
 rel="stylesheet"
 />
 
+<!-- CSRF Token -->
+<meta name="csrf-token" content="{{ csrf_token() }}">
+
 <link rel="shortcut icon" href="{{ asset('admin/assets/img/logo/nongki.ico') }}" type="image/x-icon">
 
 <link rel="stylesheet" href="{{ asset('admin/assets/vendor/fonts/boxicons.css') }}" />
@@ -21,8 +24,13 @@ rel="stylesheet"
 
 <link rel="stylesheet" href="{{ asset('admin/assets/vendor/libs/apex-charts/apex-charts.css') }}" />
 
+<link rel="stylesheet" type="text/css" href="{{ asset('admin/assets/vendor/DataTables/datatables.min.css') }}" />
+
 <script src="{{ asset('admin/assets/vendor/js/helpers.js') }}"></script>
 
 <script src="{{ asset('admin/assets/js/config.js') }}"></script>
+
+<script src="{!! asset('admin/assets/vendor/jquery/jquery.min.js') !!}"></script>
+{{-- <script type="text/javascript" src="{{ asset('admin/assets/vendor/DataTables/datatables.min.js') }}"></script> --}}
 
 <title>@yield('adminTitle', 'Dashboard Admin')</title>

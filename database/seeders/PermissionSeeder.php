@@ -48,10 +48,5 @@ class Permission extends Seeder
             'name'       => 'admin_edit',
             'guard_name' => 'web'
         ]);
-
-        \App\Models\Permission::create([
-            'name'       => 'system_management_access',
-            'guard_name' => 'web'
-        ]);
     }
 }

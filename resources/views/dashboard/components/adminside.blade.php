@@ -80,7 +80,7 @@
         </li>
         <!-- HAK AKSES -->
         <li class="menu-item @yield('hak-akses')">
-            <a href="#" class="menu-link">
+            <a href="{!! route('hak-akses.index') !!}" class="menu-link">
                 <i class="menu-icon tf-icons bx bxs-user-detail"></i>
                 <div data-i18n="User interface">Hak-akses</div>
             </a>

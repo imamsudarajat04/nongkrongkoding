@@ -1,10 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Auth\LoginController;
-use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\AdminprofileController;
 
 //Landing Page
@@ -24,4 +25,8 @@ Route::group(['middleware' => ['auth']], function() {
     Route::put('/updateProfile/{id}', [AdminprofileController::class, 'updateProfile'])->name('admin.updateProfile');
     Route::get('/password', [AdminprofileController::class, 'resetPassword'])->name('admin.password');
     Route::put('/password/{id}', [AdminprofileController::class, 'updatePassword'])->name('admin.updatePassword');
+
+    //Hak Akses
+    Route::resource('/hak-akses', PermissionController::class);
+
 });
