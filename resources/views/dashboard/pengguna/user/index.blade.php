@@ -1,6 +1,6 @@
 @extends('dashboard.layout.dashboard')
 
-@section('adminTitle', 'Admin | Kategori-Video')
+@section('adminTitle', 'Dashboard | Data-User')
 @section('pengguna', 'active')
 
 @section('breadOld', 'Pengguna')

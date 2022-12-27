@@ -50,7 +50,7 @@
         </li>
         <!-- VIDEO, KATEGORI SERTA TAMBAH VIDEO -->
         <li class="menu-item @yield('video')">
-            <a href="#" class="menu-link menu-toggle">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bxs-videos"></i>
                 <div data-i18n="Misc">Video</div>
             </a>

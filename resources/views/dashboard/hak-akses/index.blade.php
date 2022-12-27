@@ -1,6 +1,6 @@
 @extends('dashboard.layout.dashboard')
 
-@section('adminTitle', 'Admin | Hak-akses')
+@section('adminTitle', 'Dashboard | Hak-akses')
 @section('hak-akses', 'active')
 
 @section('breadOld', 'Dashboard')
