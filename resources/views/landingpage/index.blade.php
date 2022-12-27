@@ -428,7 +428,7 @@
                 <div class="col-lg-12 offset-lg-12">
                     <div class="section-heading  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
                         <h4>Telah digunakan oleh 10 orang di Indonesia</h4>
-                        <h6><small>Mother Fucking fikri</small></h6>
+                        <h6><small>Nongkrong Koding</small></h6>
                         <div class="line-dec"></div>
                     </div>
                 </div>
