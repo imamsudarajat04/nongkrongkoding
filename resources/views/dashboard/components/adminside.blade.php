@@ -43,7 +43,7 @@
 
                 <li class="menu-item">
                     <a href="{{ route('pengguna.index') }}" class="menu-link">
-                        <div data-i18n="Notifications">Pengguna</div>
+                        <div data-i18n="Account">Pengguna</div>
                     </a>
                 </li>
             </ul>
