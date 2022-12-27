@@ -114,7 +114,7 @@
         <li class="menu-item @yield('articles')">
             <a href="#" class="menu-link">
                 <i class="menu-icon tf-icons bx bxs-news"></i>
-                <div data-i18n="User interface">articles</div>
+                <div data-i18n="User interface">Articles</div>
             </a>
         </li>
     </ul>
