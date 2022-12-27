@@ -3,7 +3,7 @@
 @section('adminTitle', 'Admin | Hak-akses')
 @section('hak-akses', 'active')
 
-@section('breadOld', 'Admin')
+@section('breadOld', 'Dashboard')
 @section('breadNow', 'Hak-akses')
 
 @section('adminContent')

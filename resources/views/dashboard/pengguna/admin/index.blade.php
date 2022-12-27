@@ -1,24 +1,25 @@
 @extends('dashboard.layout.dashboard')
 
 @section('adminTitle', 'Admin | Data-Admin')
-@section('jabatan', 'active')
+@section('pengguna', 'active')
 
-@section('breadOld', 'Dashboard')
-@section('breadNow', 'Jabatan')
+@section('breadOld', 'Pengguna')
+@section('breadNow', 'Admin')
 
 @section('adminContent')
     <div class="content-wrapper">
         <div class="container-xxl flex-grow-1 container-p-y">
         <div class="card">
-            <div class="card-header">Daftar Jabatan</div>
+            <div class="card-header">Data Admin</div>
 
             <div class="table-responsive text-nowrap">
                 <table class="table table-striped table-bordered dt-responsive nowrap w-100 display" id="table-category">
                     <thead>
                         <tr class="text-nowrap">
                         <th>No</th>
-                        <th>Nama Jabatan</th>
-                        <th>Link</th>
+                        <th>Nama</th>
+                        <th>Email</th>
+                        <th>No Hp</th>
                         <th colspan="2">Aksi</th>
                         </tr>
                     </thead>
