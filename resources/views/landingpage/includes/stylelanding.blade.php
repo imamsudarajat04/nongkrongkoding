@@ -2,11 +2,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
 <meta name="author" content="">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
 
 <title>@yield('userTitle', 'Nongkrong Koding')</title>
 
-<link rel="shortcut icon" href="{{ asset('admin/assets/img/logo/nongki.ico') }}" type="image/x-icon">
+<link rel="shortcut icon" href="{{ asset('admin/assets/img/Logo/nongki.ico') }}" type="image/x-icon">
 
 <link href="{{ asset('landing/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
