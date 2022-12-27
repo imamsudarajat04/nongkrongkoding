@@ -233,7 +233,7 @@
                                                 <span class="icon"><img
                                                         src="{{ asset('landing/assets/images/javascript.png') }}"
                                                         alt=""></span>
-                                                <small>Mengenal Javascript</small>
+                                                <small>Javascript</small>
                                             </div>
                                         </div>
                                     </div>
