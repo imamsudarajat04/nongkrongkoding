@@ -251,14 +251,12 @@
                                                                 <p>Tingkatkan keahlianmu di frontend dan backend
                                                                     dengan mudah</p>
                                                                 <div class="ticks-list"><span><i
-                                                                            class="fa fa-check"></i> UI Design</span>
-                                                                    <span><i class="fa fa-check"></i> UX Design</span>
+                                                                            class="fa fa-check"></i> UI/UX
+                                                                        Design</span><br>
                                                                     <span><i class="fa fa-check"></i> HTML, CSS
-                                                                        &amp; JS</span>
+                                                                        &amp; JS</span><br>
                                                                     <span><i class="fa fa-check"></i> PHP &amp;
-                                                                        Laravel</span>
-                                                                    <span><i class="fa fa-check"></i> Git Hub</span>
-                                                                    <span><i class="fa fa-check"></i> My SQL</span>
+                                                                        Database</span>
                                                                 </div>
                                                                 <p>Pelajari serta terapkan di dunia kerja dan bekerja
                                                                     menjadi "Full stack Developer!"</p>
@@ -287,15 +285,13 @@
                                                                     Selamat Berjuang di kelas Front End Developer!
                                                                 </p>
                                                                 <div class="ticks-list">
-                                                                    <span><i class="fa fa-check"></i> Logo
+                                                                    <span><i class="fa fa-check"></i> UI/UX
                                                                         Design</span>
-                                                                    <span><i class="fa fa-check"></i> UI Design</span>
-                                                                    <span><i class="fa fa-check"></i> UX Design</span>
                                                                     <span><i class="fa fa-check"></i> HTML &amp;
                                                                         CSS</span>
-                                                                    <span><i class="fa fa-check"></i> Figma &amp;
-                                                                        Adobe</span>
-                                                                    <span><i class="fa fa-check"></i> Git Hub</span>
+                                                                    <span><i class="fa fa-check"></i> JavaScript</span>
+                                                                    <span></span>
+                                                                    <span><i class="fa fa-check"></i> Figma</span>
                                                                 </div>
                                                                 <p>jadilah salah satu orang yang ahli di Frontend
                                                                     Developer!
@@ -463,8 +459,7 @@
                                 <a href="#">
                                     <div class="portfolio-item">
                                         <div class="thumb">
-                                            <img src="{{ asset('landing/assets/images/portfolio-01.jpg') }}"
-                                                alt="">
+                                            <img src="{!! Storage::exists('public/' . $k->image) && $k->image ? Storage::url($k->image) : asset($k->image) !!}" alt="{!! $k->name !!}" />
                                         </div>
 
                                         <div class="down-content">

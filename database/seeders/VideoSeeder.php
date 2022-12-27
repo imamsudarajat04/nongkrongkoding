@@ -16,6 +16,7 @@ class VideoSeeder extends Seeder
     {
         \App\Models\Videos::create([
             'name'             => 'Laravel',
+            'image'            => 'landing/assets/images/laravel.png',
             'thumbnail'        => 'Ini laravel',
             'description'      => 'Lorem Ipsum',
             'linkYoutube'      => 'www.youtube.com/',
@@ -25,6 +26,7 @@ class VideoSeeder extends Seeder
 
         \App\Models\Videos::create([
             'name'             => 'Javascript',
+            'image'            => 'landing/assets/images/javascript256.png',
             'thumbnail'        => 'Ini JS',
             'description'      => 'Lorem Ipsum',
             'linkYoutube'      => 'www.youtube.com/',
@@ -34,6 +36,7 @@ class VideoSeeder extends Seeder
 
         \App\Models\Videos::create([
             'name'             => 'HTML Dasar',
+            'image'            => 'landing/assets/images/html-5.png',
             'thumbnail'        => 'Ini HTML',
             'description'      => 'Lorem Ipsum',
             'linkYoutube'      => 'www.youtube.com/',
@@ -43,6 +46,7 @@ class VideoSeeder extends Seeder
 
         \App\Models\Videos::create([
             'name'             => 'CSS Dasar',
+            'image'            => 'landing/assets/images/css.png',
             'thumbnail'        => 'Ini CSS',
             'description'      => 'Lorem Ipsum',
             'linkYoutube'      => 'www.youtube.com/',
@@ -52,6 +56,7 @@ class VideoSeeder extends Seeder
 
         \App\Models\Videos::create([
             'name'             => 'Bootstrap Dasar',
+            'image'            => 'landing/assets/images/bootstrap.png',
             'thumbnail'        => 'Ini Bootstrap',
             'description'      => 'Lorem Ipsum',
             'linkYoutube'      => 'www.youtube.com/',
