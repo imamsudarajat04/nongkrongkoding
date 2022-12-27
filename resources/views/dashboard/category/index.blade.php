@@ -32,3 +32,57 @@
         </div>
     </div>
 @endsection
+
+@push('customJs')
+    <script>
+        $('#table-hakakses').DataTable({
+            processing: true,
+            serverSide: true,
+            ordering: true,
+            ajax: '{!! url()->current() !!}',
+            order: [
+                [1, 'asc']
+            ],
+            columns: [
+                {
+                    data: 'DT_RowIndex',
+                    name: 'DT_RowIndex',
+                    width: '1%',
+                    orderable: false,
+                    searchable: false
+                },
+                {
+                    data: 'name',
+                    name: 'name'
+                },
+                {
+                    data: '',
+                    name: 'nik'
+                },
+                {
+                    data: 'nama_lengkap',
+                    name: 'nama_lengkap',
+                },
+                {
+                    data: 'rt',
+                    name: 'rt',
+                },
+                {
+                    data: 'rw',
+                    name: 'rw',
+                },
+                {
+                    data: 'action',
+                    name: 'action',
+                    orderable: false,
+                    searchable: false,
+                    width: '1%'
+                }
+            ],
+            sDom: '<"secondBar d-flex flex-w1rap justify-content-between mb-2"lf>rt<"bottom"p>',
+            "fnCreatedRow": function(nRow, data) {
+                $(nRow).attr('id', 'warga' + data.id);
+            },
+        });
+    </script>
+@endpush
