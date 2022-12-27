@@ -1,7 +1,8 @@
 @extends('dashboard.layout.dashboard')
 
 @section('adminTitle', 'Dashboard | Kategori-Video')
-@section('video', 'active')
+@section('video', 'active open')
+@section('category', 'active')
 
 @section('breadOld', 'Video')
 @section('breadNow', 'Kategori-Video')
