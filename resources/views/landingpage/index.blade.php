@@ -224,7 +224,7 @@
                                                 <span class="icon"><img
                                                         src="{{ asset('landing/assets/images/icons8-security-98.png') }}"
                                                         alt=""></span>
-                                                <small>Cyber <br> Security</small>
+                                                <small>Cyber Security</small>
                                             </div>
                                         </div>
 
@@ -233,7 +233,7 @@
                                                 <span class="icon"><img
                                                         src="{{ asset('landing/assets/images/javascript.png') }}"
                                                         alt=""></span>
-                                                <small>Mengenal <br> Javascript</small>
+                                                <small>Mengenal Javascript</small>
                                             </div>
                                         </div>
                                     </div>
