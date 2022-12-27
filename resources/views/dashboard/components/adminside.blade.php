@@ -55,7 +55,7 @@
                 <div data-i18n="Misc">Video</div>
             </a>
             <ul class="menu-sub @yield('category')">
-                <li class="menu-item">
+                <li class="menu-item @yield('category')">
                     <a href="{{ route('category.index') }}" class="menu-link">
                         <div data-i18n="Video">Kategori Video</div>
                     </a>
@@ -114,7 +114,7 @@
         <li class="menu-item @yield('articles')">
             <a href="#" class="menu-link">
                 <i class="menu-icon tf-icons bx bxs-news"></i>
-                <div data-i18n="User interface">articles</div>
+                <div data-i18n="User interface">Articles</div>
             </a>
         </li>
     </ul>

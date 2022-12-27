@@ -12,6 +12,11 @@ use App\Http\Controllers\Admin\PenggunaController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\JabatanController;
 
+Route::get('generate', function () {
+    \Illuminate\Support\Facades\Artisan::call('storage:link');
+    echo 'ok';
+});
+
 //Landing Page
 Route::get('/', [LandingPageController::class, 'index'])->name('landingPage.index');
 
