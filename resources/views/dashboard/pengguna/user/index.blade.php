@@ -2,6 +2,7 @@
 
 @section('adminTitle', 'Dashboard | Data-User')
 @section('pengguna', 'active')
+@section('user', 'active')
 
 @section('breadOld', 'Pengguna')
 @section('breadNow', 'Non-Admin')

@@ -35,13 +35,13 @@
             </a>
 
             <ul class="menu-sub">
-                <li class="menu-item">
+                <li class="menu-item @yield('admin')">
                     <a href="{{ route('admin.index') }}" class="menu-link">
                         <div data-i18n="Account">Admin</div>
                     </a>
                 </li>
 
-                <li class="menu-item">
+                <li class="menu-item @yield('user')">
                     <a href="{{ route('pengguna.index') }}" class="menu-link">
                         <div data-i18n="Account">Pengguna</div>
                     </a>
@@ -54,14 +54,14 @@
                 <i class="menu-icon tf-icons bx bxs-videos"></i>
                 <div data-i18n="Misc">Video</div>
             </a>
-            <ul class="menu-sub">
+            <ul class="menu-sub @yield('category')">
                 <li class="menu-item">
                     <a href="{{ route('category.index') }}" class="menu-link">
                         <div data-i18n="Video">Kategori Video</div>
                     </a>
                 </li>
 
-                <li class="menu-item">
+                <li class="menu-item @yield('tambahVideo')">
                     <a href="#" class="menu-link">
                         <div data-i18n="Video">Tambah Video</div>
                     </a>
@@ -86,8 +86,9 @@
             </a>
         </li>
 
-        <!-- PENGATURAN KOMPONEN HALAMAN USER&DASHBOARD -->
+        <!-- PENGATURAN KOMPONEN HALAMAN USER & DASHBOARD -->
         <li class="menu-header small text-uppercase"><span class="menu-header-text">Komponen</span></li>
+
         <li class="menu-item @yield('pengaturan')">
             <a href="javascript:void(0)" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bxs-cog"></i>
@@ -95,16 +96,26 @@
             </a>
             
             <ul class="menu-sub">
-                <li class="menu-item">
+                <li class="menu-item @yield('settingFooter')">
                     <a href="#" class="menu-link">
                         <div data-i18n="Accordion">Footer(landingPage)</div>
                     </a>
+                </li>
 
+                <li class="menu-item @yield('settingBody')">
                     <a href="#" class="menu-link">
                         <div data-i18n="Accordion">Bodi</div>
                     </a>
                 </li>
             </ul>
+        </li>
+
+        <li class="menu-header small text-uppercase"><span class="menu-header-text">Articles</span></li>
+        <li class="menu-item @yield('articles')">
+            <a href="#" class="menu-link">
+                <i class="menu-icon tf-icons bx bxs-news"></i>
+                <div data-i18n="User interface">articles</div>
+            </a>
         </li>
     </ul>
 </aside>

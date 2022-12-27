@@ -1,7 +1,9 @@
 @extends('dashboard.layout.dashboard')
 
 @section('adminTitle', 'Dashboard | Data-Admin')
+
 @section('pengguna', 'active')
+@section('admin', 'active')
 
 @section('breadOld', 'Pengguna')
 @section('breadNow', 'Admin')
