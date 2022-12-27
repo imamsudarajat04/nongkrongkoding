@@ -1,0 +1,5 @@
+---
+deployment:
+tasks:
+- export DEPLOYPATH=/home/nongkron/public_html/git
+- /bin/cp -R * $DEPLOYPATH

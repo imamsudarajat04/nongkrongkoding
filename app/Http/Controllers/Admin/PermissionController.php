@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
+use App\Models\Permission;
 use App\Http\Controllers\Controller;
 use Yajra\DataTables\Facades\DataTables;
 
@@ -15,6 +16,24 @@ class PermissionController extends Controller
      */
     public function index(Request $request)
     {
+        if(request()->ajax()) {
+            $data = Permission::all();
+
+            return DataTables::of($data)
+                ->addColumn('action', function ($item) {
+                    return '
+                         <a class="btn btn-primary" href="' . route('hak-akses.edit', $item->id) . '">
+                            <i class="fas fa-pen"></i> Ubah
+                        </a>
+                        <button class="btn btn-danger delete_warga" data-id="' . $item->id . '">
+                            <i class="fas fa-trash"></i> Hapus
+                        </button>
+                    ';
+                })
+                ->rawColumns(['action'])
+                ->addIndexColumn()
+                ->make();
+        }
         return view('dashboard.hak-akses.index');
     }
 
