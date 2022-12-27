@@ -1,7 +1,8 @@
 @extends('dashboard.layout.dashboard')
 
 @section('adminTitle', 'Dashboard | Data-User')
-@section('pengguna', 'active')
+
+@section('pengguna', 'active open')
 @section('user', 'active')
 
 @section('breadOld', 'Pengguna')
