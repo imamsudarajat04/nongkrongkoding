@@ -16,6 +16,7 @@ class PermissionController extends Controller
      */
     public function index(Request $request)
     {
+        //index
         if(request()->ajax()) {
             $data = Permission::all();
 

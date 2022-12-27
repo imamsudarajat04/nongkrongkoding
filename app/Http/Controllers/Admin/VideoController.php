@@ -15,6 +15,7 @@ class VideoController extends Controller
      */
     public function index()
     {
+        //index
         // $videos = DB::table('videos')->get();
         return view('dashboard.category.index', [
             // $videos => 'videos',

@@ -12,6 +12,7 @@ class DashboardController extends Controller
 {
     public function index()
     {
+        //Dashboard Index
         return view('dashboard.index', [
             'admin'    => DB::table('users')->where('id'),
             'video'    => Videos::count(),

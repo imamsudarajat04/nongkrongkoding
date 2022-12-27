@@ -15,16 +15,19 @@ class AdminprofileController extends Controller
 {
     public function index()
     {
+        //index
         return view('dashboard.profile.index');
     }
 
     public function resetPassword()
     {
+        //Reset Password
         return view('dashboard.profile.password');
     }
 
     public function updateProfile($id, UpdateProfileRequest $request)
     {
+        //Update Profile
         $data = $request->all();
         $cek = User::findOrFail($id);
         
@@ -40,6 +43,7 @@ class AdminprofileController extends Controller
 
     public function updatePassword($id, ChangePasswordRequest $request) 
     {
+        //Update Password
         $cek = User::findOrFail($id);
 
         if(Hash::check($request->oldPassword, $cek->password)) {
