@@ -233,7 +233,7 @@
                                                 <span class="icon"><img
                                                         src="{{ asset('landing/assets/images/javascript.png') }}"
                                                         alt=""></span>
-                                                <small>Bahasa <br> Javascript</small>
+                                                <small>Mengenal <br> Javascript</small>
                                             </div>
                                         </div>
                                     </div>
@@ -265,7 +265,7 @@
 
                                                         <div class="col-lg-6 align-self-center">
                                                             <div class="right-image">
-                                                                <img src="{{ asset('landing/assets/images/services-image.jpg') }}"
+                                                                <img src="{{ asset('landing/assets/images/fullstack.jpg') }}"
                                                                     alt="">
                                                             </div>
                                                         </div>
@@ -286,11 +286,11 @@
                                                                 </p>
                                                                 <div class="ticks-list">
                                                                     <span><i class="fa fa-check"></i> UI/UX
-                                                                        Design</span>
+                                                                        Design</span><br>
                                                                     <span><i class="fa fa-check"></i> HTML &amp;
-                                                                        CSS</span>
-                                                                    <span><i class="fa fa-check"></i> JavaScript</span>
-                                                                    <span></span>
+                                                                        CSS</span><br>
+                                                                    <span><i class="fa fa-check"></i>
+                                                                        JavaScript</span><br>
                                                                     <span><i class="fa fa-check"></i> Figma</span>
                                                                 </div>
                                                                 <p>jadilah salah satu orang yang ahli di Frontend
@@ -301,7 +301,7 @@
 
                                                         <div class="col-lg-6 align-self-center">
                                                             <div class="right-image">
-                                                                <img src="{{ asset('landing/assets/images/services-image-02.jpg') }}"
+                                                                <img src="{{ asset('landing/assets/images/frontend.jpg') }}"
                                                                     alt="">
                                                             </div>
                                                         </div>
@@ -323,8 +323,7 @@
                                                                     kami!</p>
                                                                 <div class="ticks-list">
                                                                     <span><i class="fa fa-check"></i> PHP &amp;
-                                                                        Laravel</span>
-                                                                    <span><i class="fa fa-check"></i> Git Hub</span>
+                                                                        NodeJS</span><br>
                                                                     <span><i class="fa fa-check"></i> My SQL</span>
                                                                 </div>
                                                                 <p>Jadilah Backend Developer yang Handal!</p>
@@ -333,7 +332,7 @@
 
                                                         <div class="col-lg-6 align-self-center">
                                                             <div class="right-image">
-                                                                <img src="{{ asset('landing/assets/images/services-image-03.jpg') }}"
+                                                                <img src="{{ asset('landing/assets/images/backend.jpg') }}"
                                                                     alt="">
                                                             </div>
                                                         </div>
@@ -353,14 +352,15 @@
                                                                     bersama kami!</p>
                                                                 <div class="ticks-list">
                                                                     <span><i class="fa fa-check"></i>Ethical
-                                                                        Hacking</span>
+                                                                        Hacking</span><br>
                                                                     <span><i class="fa fa-check"></i>Penetration
-                                                                        Testing</span>
+                                                                        Testing</span><br>
                                                                     <span><i class="fa fa-check"></i>Security
-                                                                        Hacking</span>
+                                                                        Hacking</span><br>
                                                                     <span><i class="fa fa-check"></i>Networking
-                                                                        Security</span>
-                                                                    <span><i class="fa fa-check"></i>Kali Linux</span>
+                                                                        Security</span><br>
+                                                                    <span><i class="fa fa-check"></i>Kali
+                                                                        Linux</span><br>
                                                                     <span><i class="fa fa-check"></i>Information
                                                                         Security</span>
                                                                 </div>
@@ -370,7 +370,7 @@
 
                                                         <div class="col-lg-6 align-self-center">
                                                             <div class="right-image">
-                                                                <img src="{{ asset('landing/assets/images/services-image-04.jpg') }}"
+                                                                <img src="{{ asset('landing/assets/images/cybersecurity.jpg') }}"
                                                                     alt="">
                                                             </div>
                                                         </div>
@@ -390,9 +390,10 @@
                                                                     sendiri dapat mendukung dalam pembuatan sebuah
                                                                     website yang Profesional.</p>
                                                                 <div class="ticks-list">
-                                                                    <span><i class="fa fa-check"></i>Fundamental
-                                                                        Js</span>
-                                                                    <span><i class="fa fa-check"></i>Struktur Js</span>
+                                                                    <span><i
+                                                                            class="fa fa-check"></i>FundamentalJs</span><br>
+                                                                    <span><i
+                                                                            class="fa fa-check"></i>StrukturJs</span><br>
                                                                     <span><i class="fa fa-check"></i>Membuat Portofolio
                                                                         dengan Js</span>
                                                                 </div>
@@ -402,7 +403,7 @@
 
                                                         <div class="col-lg-6 align-self-center">
                                                             <div class="right-image">
-                                                                <img src="{{ asset('landing/assets/images/services-image.jpg') }}"
+                                                                <img src="{{ asset('landing/assets/images/javascriptillu.jpg') }}"
                                                                     alt="">
                                                             </div>
                                                         </div>
@@ -424,11 +425,10 @@
     <div id="free-quote" class="free-quote">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 offset-lg-3">
+                <div class="col-lg-12 offset-lg-12">
                     <div class="section-heading  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
-                        <h4>Trusted by over 13,400 great teams</h4>
-                        <h6><small>Leading companies use the same courses to help employees keep their skills
-                                fresh.</small></h6>
+                        <h4>Telah digunakan oleh 10 orang di Indonesia</h4>
+                        <h6><small>Mother Fucking fikri</small></h6>
                         <div class="line-dec"></div>
                     </div>
                 </div>
