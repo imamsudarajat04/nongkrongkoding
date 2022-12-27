@@ -55,7 +55,7 @@
                 <div data-i18n="Misc">Video</div>
             </a>
             <ul class="menu-sub @yield('category')">
-                <li class="menu-item">
+                <li class="menu-item @yield('category')">
                     <a href="{{ route('category.index') }}" class="menu-link">
                         <div data-i18n="Video">Kategori Video</div>
                     </a>
