@@ -36,13 +36,13 @@
 
             <ul class="menu-sub">
                 <li class="menu-item">
-                    <a href="#" class="menu-link">
+                    <a href="{{ route('admin.index') }}" class="menu-link">
                         <div data-i18n="Account">Admin</div>
                     </a>
                 </li>
 
                 <li class="menu-item">
-                    <a href="#" class="menu-link">
+                    <a href="{{ route('pengguna.index') }}" class="menu-link">
                         <div data-i18n="Notifications">Pengguna</div>
                     </a>
                 </li>
@@ -56,7 +56,7 @@
             </a>
             <ul class="menu-sub">
                 <li class="menu-item">
-                    <a href="{{ route('video.index') }}" class="menu-link">
+                    <a href="{{ route('category.index') }}" class="menu-link">
                         <div data-i18n="Video">Kategori Video</div>
                     </a>
                 </li>
@@ -73,7 +73,7 @@
         <li class="menu-header small text-uppercase"><span class="menu-header-text">Akses & Jabatan</span></li>
         <!-- JABATAN -->
         <li class="menu-item @yield('jabatan')">
-            <a href="#" class="menu-link">
+            <a href="{{ route('jabatan.index') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bxs-user-badge"></i>
                 <div data-i18n="User interface">Jabatan</div>
             </a>

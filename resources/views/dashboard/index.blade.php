@@ -52,6 +52,7 @@
                                     </button>
                                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt6">
                                         <a class="dropdown-item" href="#">Lihat Data</a>
+                                        <a class="dropdown-item" href="#">Tambah Admin</a>
                                     </div>
                                 </div>
                             </div>
@@ -78,6 +79,7 @@
                                     </button>
                                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt6">
                                         <a class="dropdown-item" href="#">Lihat Data</a>
+                                        <a class="dropdown-item" href="#">Tambah Pengguna</a>
                                     </div>
                                 </div>
                             </div>
@@ -107,7 +109,7 @@
                                         <i class="bx bx-dots-vertical-rounded"></i>
                                     </button>
                                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt6">
-                                        <a class="dropdown-item" href="#">Lihat Video</a>
+                                        <a class="dropdown-item" href="#">Tambah Video</a>
                                     </div>
                                 </div>
                             </div>
@@ -133,6 +135,7 @@
                                         <i class="bx bx-dots-vertical-rounded"></i>
                                     </button>
                                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt6">
+                                        <a class="dropdown-item" href="#">Tambah Kategori</a>
                                         <a class="dropdown-item" href="#">Lihat Kategori</a>
                                     </div>
                                 </div>

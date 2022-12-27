@@ -8,6 +8,9 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\AdminprofileController;
 use App\Http\Controllers\Admin\VideoController;
+use App\Http\Controllers\Admin\PenggunaController;
+use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\JabatanController;
 
 //Landing Page
 Route::get('/', [LandingPageController::class, 'index'])->name('landingPage.index');
@@ -31,6 +34,15 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('/hak-akses', PermissionController::class);
 
     //Video
-    Route::get('/video/category', [VideoController::class, 'index'])->name('video.index');
+    Route::resource('/video/category', VideoController::class);
+
+    //Penguna
+    Route::resource('/data/pengguna', PenggunaController::class);
+
+    //Admin
+    Route::resource('/data/admin', AdminController::class);
+
+    //Jabatan
+    Route::resource('/jabatan', JabatanController::class);
 
 });
