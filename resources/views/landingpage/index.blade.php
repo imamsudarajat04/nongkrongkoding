@@ -21,9 +21,10 @@
     <div class="pre-header">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-sm-8 col-7">
+                <div class="col-lg-7 col-sm-7 col-7">
                     <ul class="info">
-                        <li><a href="#"><i class="fa fa-envelope"></i>nongkrongkoding@gmail.com</a></li>
+                        <li><a href="#"><i class="fa fa-envelope"></i><small>admin@nongkrongkoding.my.id</small>
+                            </a></li>
                         <li><a href="#"><i class="fa fa-phone"></i>0812-3456-7890</a></li>
                     </ul>
                 </div>
@@ -491,8 +492,7 @@
                 <div class="col-lg-6 show-up wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
                     <div class="blog-post">
                         <div class="thumb">
-                            <a href="#"><img
-                                    src="{{ asset('landing/assets/images/hacker-working-darkness.jpg') }}"
+                            <a href="#"><img src="{{ asset('landing/assets/images/article_cs.jpg') }}"
                                     alt=""></a>
                         </div>
 
