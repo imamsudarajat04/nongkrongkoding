@@ -26,7 +26,9 @@ rel="stylesheet"
 
 <link rel="stylesheet" type="text/css" href="{{ asset('admin/assets/vendor/datatables/datatables.min.css') }}" />
 
+<!-- Vendor -->
 <script src="{{ asset('admin/assets/vendor/js/helpers.js') }}"></script>
+{{-- <link href="{{ asset('admin/assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet"> --}}
 
 <script src="{{ asset('admin/assets/js/config.js') }}"></script>
 
