@@ -16,7 +16,7 @@
                                 <p class="mb-4">
                                     Tambah konten baru dan video agar pengguna lebih tertarik dengan konten yang beragam
                                 </p>
-                            <a href="#" class="btn btn-sm btn-outline-primary">Tambah Video</a>
+                            <a href="{{ route('video.create') }}" class="btn btn-sm btn-outline-primary">Tambah Video</a>
                         </div>
                     </div>
 

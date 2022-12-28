@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\VideoController;
 use App\Http\Controllers\Admin\PenggunaController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\JabatanController;
+use App\Http\Controllers\Admin\CategoryController;
 
 Route::get('generate', function () {
     \Illuminate\Support\Facades\Artisan::call('storage:link');
@@ -39,7 +40,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('/hak-akses', PermissionController::class);
 
     //Video-category
-    Route::resource('/video/category', VideoController::class);
+    Route::resource('/video/category', CategoryController::class);
 
     //Pengguna
     Route::resource('/data/pengguna', PenggunaController::class);
@@ -50,4 +51,6 @@ Route::group(['middleware' => ['auth']], function() {
     //Jabatann
     Route::resource('/jabatan', JabatanController::class);
 
+    //Video
+    Route::resource('/video', VideoController::class);
 });
