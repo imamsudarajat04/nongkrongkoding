@@ -3,9 +3,9 @@
         <div class="row">
             <div class="col-12">
                 <nav class="main-nav">
-                    
+
                     <a href="{{ route('landingPage.index') }}" class="logo">
-                        <img src="{{ asset('admin/assets/img/logo/4k-edit.png') }}" alt="">
+                        <img src="{{ asset('admin/assets/img/Logo/4k-edit.png') }}" alt="">
                     </a>
 
                     <ul class="nav">

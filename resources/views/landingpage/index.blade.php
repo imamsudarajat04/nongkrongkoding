@@ -21,11 +21,14 @@
     <div class="pre-header">
         <div class="container">
             <div class="row">
-                <div class="col-lg-7 col-sm-7 col-7">
+                <div class="col-lg-7 col-sm-7">
                     <ul class="info">
-                        <li><a href="#"><i class="fa fa-envelope"></i><small>admin@nongkrongkoding.my.id</small>
-                            </a></li>
+                        <li><a href="#"><i
+                                    class="fa fa-envelope"></i><small>admin@nongkrongkoding.my.id</small></a></li>
                         <li><a href="#"><i class="fa fa-phone"></i>0812-3456-7890</a></li>
+                        {{-- <span><a href="#"><i
+                                    class="fa fa-envelope"></i><small>admin@nongkrongkoding.my.id</small></span>
+                        <span><a href="#"><i class="fa fa-phone"></i>0812-3456-7890</a></li></span> --}}
                     </ul>
                 </div>
 
@@ -460,7 +463,9 @@
                                 <a href="#">
                                     <div class="portfolio-item">
                                         <div class="thumb">
-                                            <img src="{!! Storage::exists('public/' . $k->image) && $k->image ? Storage::url($k->image) : asset($k->image) !!}" alt="{!! $k->name !!}" />
+                                            <img src="{!! Storage::exists('public/' . $k->thumbnail) && $k->thumbnail
+                                                ? Storage::url($k->thumbnail)
+                                                : asset($k->thumbnail) !!}" alt="{!! $k->name !!}" />
                                         </div>
 
                                         <div class="down-content">
