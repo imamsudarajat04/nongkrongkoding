@@ -61,9 +61,9 @@
                     </a>
                 </li>
 
-                <li class="menu-item @yield('tambahVideo')">
-                    <a href="#" class="menu-link">
-                        <div data-i18n="Video">Tambah Video</div>
+                <li class="menu-item @yield('indexVideo')">
+                    <a href="{{ route('video.index') }}" class="menu-link">
+                        <div data-i18n="Video">Video</div>
                     </a>
                 </li>
             </ul>

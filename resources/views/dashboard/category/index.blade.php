@@ -19,8 +19,8 @@
                         <tr class="text-nowrap">
                         <th>No</th>
                         <th>Nama Kategori</th>
-                        <th>Nama Video</th>
-                        <th>Link</th>
+                        <th>Created At</th>
+                        <th>Updated At</th>
                         <th colspan="2">Aksi</th>
                         </tr>
                     </thead>

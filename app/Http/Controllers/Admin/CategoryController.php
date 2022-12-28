@@ -4,10 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use app\Http\Requests\VideoRequest;
 
-class VideoController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +14,7 @@ class VideoController extends Controller
      */
     public function index()
     {
-        return view('dashboard.video.index');
+        return view('dashboard.category.index');
     }
 
     /**
@@ -26,7 +24,7 @@ class VideoController extends Controller
      */
     public function create()
     {
-        return view('dashboard.video.create');
+        //
     }
 
     /**
