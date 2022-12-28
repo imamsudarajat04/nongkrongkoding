@@ -16,8 +16,7 @@ class VideoSeeder extends Seeder
     {
         \App\Models\Videos::create([
             'name'             => 'Laravel',
-            'image'            => 'landing/assets/images/laravel.png',
-            'thumbnail'        => 'Ini laravel',
+            'thumbnail'        => 'landing/assets/images/laravel.png',
             'description'      => 'Lorem Ipsum',
             'linkYoutube'      => 'www.youtube.com/',
             'categoryvideo_id' => 1,
@@ -26,8 +25,7 @@ class VideoSeeder extends Seeder
 
         \App\Models\Videos::create([
             'name'             => 'Javascript',
-            'image'            => 'landing/assets/images/javascript256.png',
-            'thumbnail'        => 'Ini JS',
+            'thumbnail'        => 'landing/assets/images/javascript256.png',
             'description'      => 'Lorem Ipsum',
             'linkYoutube'      => 'www.youtube.com/',
             'categoryvideo_id' => 2,
@@ -36,8 +34,7 @@ class VideoSeeder extends Seeder
 
         \App\Models\Videos::create([
             'name'             => 'HTML Dasar',
-            'image'            => 'landing/assets/images/html-5.png',
-            'thumbnail'        => 'Ini HTML',
+            'thumbnail'        => 'landing/assets/images/html-5.png',
             'description'      => 'Lorem Ipsum',
             'linkYoutube'      => 'www.youtube.com/',
             'categoryvideo_id' => 3,
@@ -46,8 +43,7 @@ class VideoSeeder extends Seeder
 
         \App\Models\Videos::create([
             'name'             => 'CSS Dasar',
-            'image'            => 'landing/assets/images/css.png',
-            'thumbnail'        => 'Ini CSS',
+            'thumbnail'        => 'landing/assets/images/css.png',
             'description'      => 'Lorem Ipsum',
             'linkYoutube'      => 'www.youtube.com/',
             'categoryvideo_id' => 4,
@@ -56,8 +52,7 @@ class VideoSeeder extends Seeder
 
         \App\Models\Videos::create([
             'name'             => 'Bootstrap Dasar',
-            'image'            => 'landing/assets/images/bootstrap.png',
-            'thumbnail'        => 'Ini Bootstrap',
+            'thumbnail'        => 'landing/assets/images/bootstrap.png',
             'description'      => 'Lorem Ipsum',
             'linkYoutube'      => 'www.youtube.com/',
             'categoryvideo_id' => 5,
