@@ -51,24 +51,12 @@
                   searchable: false
               },
               {
-                  data: 'no_kk',
-                  name: 'no_kk'
+                  data: 'name',
+                  name: 'name',
               },
               {
-                  data: 'nik',
-                  name: 'nik'
-              },
-              {
-                  data: 'nama_lengkap',
-                  name: 'nama_lengkap',
-              },
-              {
-                  data: 'rt',
-                  name: 'rt',
-              },
-              {
-                  data: 'rw',
-                  name: 'rw',
+                  data: 'guard_name',
+                  name: 'guard_name',
               },
               {
                   data: 'action',
@@ -80,7 +68,7 @@
           ],
           sDom: '<"secondBar d-flex flex-w1rap justify-content-between mb-2"lf>rt<"bottom"p>',
           "fnCreatedRow": function(nRow, data) {
-              $(nRow).attr('id', 'warga' + data.id);
+              $(nRow).attr('id', 'hak-akses' + data.id);
           },
         });
     </script>

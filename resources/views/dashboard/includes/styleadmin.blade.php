@@ -24,7 +24,7 @@ rel="stylesheet"
 
 <link rel="stylesheet" href="{{ asset('admin/assets/vendor/libs/apex-charts/apex-charts.css') }}" />
 
-<link rel="stylesheet" type="text/css" href="{{ asset('admin/assets/vendor/DataTables/datatables.min.css') }}" />
+<link rel="stylesheet" type="text/css" href="{{ asset('admin/assets/vendor/datatables/datatables.min.css') }}" />
 
 <script src="{{ asset('admin/assets/vendor/js/helpers.js') }}"></script>
 

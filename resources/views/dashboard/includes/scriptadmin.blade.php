@@ -1,4 +1,4 @@
-<script type="text/javascript" src="{{ asset('admin/assets/vendor/DataTables/datatables.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('admin/assets/vendor/datatables/datatables.min.js') }}"></script>
 {{-- <script src="{{ asset('admin/assets/vendor/libs/jquery/jquery.js') }}"></script> --}}
 <script src="{{ asset('admin/assets/vendor/libs/popper/popper.js') }}"></script>
 <script src="{{ asset('admin/assets/vendor/js/bootstrap.js') }}"></script>
