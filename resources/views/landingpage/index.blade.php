@@ -59,12 +59,19 @@
                                         <h6>Nongkrong Koding</h6>
                                         <h2>Pelajari Koding dengan mudah bersama kami.</h2>
                                     </div>
-
-                                    <div class="col-lg-12">
-                                        <div class="border-first-button scroll-to-section">
-                                            <a href="/login">Mulai</a>
+                                    @auth
+                                        <div class="col-lg-12">
+                                            <div class="border-first-button scroll-to-section">
+                                                <a href="/dashboard" class="button large">Dashboard</a>
+                                            </div>
                                         </div>
-                                    </div>
+                                    @else
+                                        <div class="col-lg-12">
+                                            <div class="border-first-button ">
+                                                <a href="/login" class="button large">Mulai</a>
+                                            </div>
+                                        </div>
+                                    @endauth
                                 </div>
                             </div>
                         </div>

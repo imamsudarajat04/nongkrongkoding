@@ -16,11 +16,16 @@
                         <li class="scroll-to-section"><a href="#blog">Blog</a></li>
                         <li class="scroll-to-section"><a href="#contact">Kontak</a></li>
                         @auth
+
                             <li class="scroll-to-section"><a href="{!! route('dashboard.index') !!}">Dashboard</a></li>
                         @else
-                            <li class="scroll-to-section"><a href="{{ route('login.index') }}">Mulai</a></li>
+                            <li class="scroll-to-section">
+                                <div class="border-first-button">
+                                    <a href="{{ route('login.index') }}">Mulai</a>
+                                </div>
+                            </li>
                         @endauth
-                        <li class="scroll-to-section"></li>
+                        {{-- <li class="scroll-to-section"></li> --}}
                     </ul>
 
                     <a class='menu-trigger'>
