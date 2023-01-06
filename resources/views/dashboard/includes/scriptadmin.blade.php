@@ -9,5 +9,5 @@
 <script src="{{ asset('admin/assets/js/main.js') }}"></script>
 <script src="{{ asset('admin/assets/js/dashboards-analytics.js') }}"></script>
 <script async defer src="https://buttons.github.io/buttons.js"></script>
-
+<script src="{{ asset('admin/assets/js/pace.min.js') }}"></script>
 @stack('customJs')
