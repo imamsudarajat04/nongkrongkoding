@@ -15,7 +15,7 @@ class PenggunaController extends Controller
     public function index()
     {
         //index
-        return view('dashboard/pengguna/user/index');
+        // return view('dashboard/pengguna/user/index');
     }
 
     /**

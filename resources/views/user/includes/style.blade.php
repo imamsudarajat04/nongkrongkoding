@@ -1,0 +1,38 @@
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+<meta name="description" content="" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+rel="stylesheet"
+/>
+
+<!-- CSRF Token -->
+<meta name="csrf-token" content="{{ csrf_token() }}">
+
+<link rel="shortcut icon" href="{{ asset('user/assets/img/Logo/nongki.ico') }}" type="image/x-icon">
+
+<link rel="stylesheet" href="{{ asset('user/assets/vendor/fonts/boxicons.css') }}" />
+
+<link rel="stylesheet" href="{{ asset('user/assets/vendor/css/core.css') }}" class="template-customizer-core-css" />
+<link rel="stylesheet" href="{{ asset('user/assets/vendor/css/theme-default.css') }}" class="template-customizer-theme-css" />
+<link rel="stylesheet" href="{{ asset('user/assets/css/demo.css') }}" />
+
+<link rel="stylesheet" href="{{ asset('user/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}" />
+
+<link rel="stylesheet" href="{{ asset('user/assets/vendor/libs/apex-charts/apex-charts.css') }}" />
+
+<link rel="stylesheet" type="text/css" href="{{ asset('user/assets/vendor/datatables/datatables.min.css') }}" />
+<link rel="stylesheet" type="text/css" href="{{ asset('user/assets/css/loading.css') }}" />
+
+<!-- Vendor -->
+<script src="{{ asset('user/assets/vendor/js/helpers.js') }}"></script>
+{{-- <link href="{{ asset('admin/assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet"> --}}
+
+<script src="{{ asset('user/assets/js/config.js') }}"></script>
+
+<script src="{!! asset('user/assets/vendor/jquery/jquery.min.js') !!}"></script>
+{{-- <script type="text/javascript" src="{{ asset('admin/assets/vendor/DataTables/datatables.min.js') }}"></script> --}}
+
+<title>@yield('userTitle', 'Dashboard | Pengguna')</title>

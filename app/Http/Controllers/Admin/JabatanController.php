@@ -15,7 +15,7 @@ class JabatanController extends Controller
     public function index()
     {
         //index
-        return view('dashboard/jabatan/index');
+        // return view('dashboard/jabatan/index');
     }
 
     /**
