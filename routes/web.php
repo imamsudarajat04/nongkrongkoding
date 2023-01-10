@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\PenggunaController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\JabatanController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\User\HomeController;
 
 Route::get('generate', function () {
     \Illuminate\Support\Facades\Artisan::call('storage:link');

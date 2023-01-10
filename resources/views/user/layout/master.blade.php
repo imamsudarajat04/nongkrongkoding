@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    @include('dashboard.includes.styleadmin')
+    @include('user.includes.style')
 </head>
 <body>
 @include('sweetalert::alert')
@@ -9,26 +9,26 @@
 
         <div class="layout-container">
 
-            @include('dashboard.components.adminside')
+            @include('user.components.sidebar')
 
             <div class="layout-page">
 
-                @include('dashboard.components.adminnav')
+                @include('user.components.navbar')
 
                 <div class="content-wrapper">
                     <div class="container-xxl flex-grow-1 container-p-y">
                         <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">@yield('breadOld') /</span> @yield('breadNow')</h4>
-                        @yield('adminContent')
+                        @yield('userContent')
                     </div>
 
-                    @include('dashboard.components.adminfooter')
+                    @include('user.components.footer')
 
                 </div>
             </div>
         </div>
     </div>
 
-    @include('dashboard.includes.scriptadmin')
+    @include('user.includes.script')
 </body>
 
 </html>
