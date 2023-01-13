@@ -12,12 +12,12 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        //Dashboard Index
-        // return view('dashboard.index', [
-        //     'admin'    => DB::table('users')->where('id'),
-        //     'video'    => Videos::count(),
-        //     'category' => CategoryVideo::count(),
-        //     'user'     => DB::table('users')->count(),
-        // ]);
+        // Dashboard Index
+        return view('dashboard.layout.DashboardLayout', [
+            'admin'    => DB::table('users')->where('id'),
+            'video'    => Videos::count(),
+            'category' => CategoryVideo::count(),
+            'user'     => DB::table('users')->count(),
+        ]);
     }
 }

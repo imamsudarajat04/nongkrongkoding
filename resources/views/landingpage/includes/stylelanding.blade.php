@@ -16,4 +16,3 @@
 <link rel="stylesheet" href="{{ asset('landing/assets/css/templatemo-digimedia-v3.css') }}">
 <link rel="stylesheet" href="{{ asset('landing/assets/css/animated.css') }}">
 <link rel="stylesheet" href="{{ asset('landing/assets/css/owl.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('admin/assets/css/loading.css') }}" />
