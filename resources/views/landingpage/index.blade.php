@@ -7,7 +7,7 @@
 
 <body>
     @include('sweetalert::alert')
-    {{-- <div id="js-preloader" class="js-preloader">
+    <div id="js-preloader" class="js-preloader">
         <div class="preloader-inner">
             <span class="dot"></span>
             <div class="dots">
@@ -16,7 +16,7 @@
                 <span></span>
             </div>
         </div>
-    </div> --}}
+    </div>
 
     <div class="pre-header">
         <div class="container">

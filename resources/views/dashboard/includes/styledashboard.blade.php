@@ -23,3 +23,5 @@
     <link href="{!! asset('admin/assets/css/app.min.css') !!}" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
     <link href="{!! asset('admin/assets/css/custom.min.css') !!}" rel="stylesheet" type="text/css" />
+    <!-- Custom style Loading -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('admin/assets/css/loading.css') }}" />
