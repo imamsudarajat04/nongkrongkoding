@@ -1,5 +1,6 @@
 @extends('dashboard.layout.DashboardLayout')
 
+@section('dashboard', 'active')
 @section('pageTitle', 'Dashboard')
 @section('breadcrumb')
     <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboards</a></li>
