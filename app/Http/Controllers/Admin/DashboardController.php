@@ -17,7 +17,7 @@ class DashboardController extends Controller
         $tglSekarang = Carbon::now()->format('d F Y');
         $date = Carbon::now()->format('H:i');
 
-        if($date >= '06:00' && $date <= '11:00')
+        if($date >= '04:00' && $date <= '11:00')
         {
             $ucapan = "Selamat Pagi";
         }
@@ -35,7 +35,7 @@ class DashboardController extends Controller
         }
 
         // Dashboard Index
-        return view('dashboard.layout.DashboardLayout', [
+        return view('dashboard.index', [
             'admin'       => DB::table('users')->where('id'),
             'video'       => Videos::count(),
             'category'    => CategoryVideo::count(),
