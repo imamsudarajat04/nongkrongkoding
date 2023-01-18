@@ -67,8 +67,8 @@
                                         </div>
                                     @else
                                         <div class="col-lg-12">
-                                            <div class="border-first-button ">
-                                                <a href="/login" class="button large">Mulai</a>
+                                            <div class="border-first-button">
+                                                <a href="/login" class="col-2 text-center">Mulai</a>
                                             </div>
                                         </div>
                                     @endauth

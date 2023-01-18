@@ -84,6 +84,7 @@
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
                         <input type="password" name="password" id="password" placeholder="Password" />
+                        {{-- <p><small>Password terdiri dari huruf besar, huruf kecil nomor dan simbol.</small></p> --}}
                     </div>
 
                     <div class="input-field">
