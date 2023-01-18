@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\CategoryVideo;
+use App\Models\Quotes;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -26,6 +27,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
                 FooterSettingSeeder::class,
                 CategoryVideoSeeder::class,
+                QuotesSeeder::class,
                 VideoSeeder::class,
                 UserSeeder::class,
                 RoleSeeder::class,

@@ -162,298 +162,6 @@
                     </div>
                 </div>
 
-                <div class="dropdown ms-1 topbar-head-dropdown header-item">
-                    <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle"
-                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img id="header-lang-img" src="{{ asset('admin/assets/images/flags/us.svg') }}" alt="Header Language" height="20"
-                            class="rounded">
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-end">
-
-                        <!-- item-->
-                        <a href="javascript:void(0);" class="dropdown-item notify-item language py-2" data-lang="en"
-                            title="English">
-                            <img src="{ asset('admin/assets/images/flags/us.svg" al') }}t="user-image" class="me-2 rounded" height="18">
-                            <span class="align-middle">English</span>
-                        </a>
-
-                        <!-- item-->
-                        <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="sp"
-                            title="Spanish">
-                            <img src="{ asset('admin/assets/images/flags/spain.svg"') }} alt="user-image" class="me-2 rounded" height="18">
-                            <span class="align-middle">Española</span>
-                        </a>
-
-                        <!-- item-->
-                        <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="gr"
-                            title="German">
-                            <img src="{ asset('admin/assets/images/flags/germany.sv') }}g" alt="user-image" class="me-2 rounded"
-                                height="18"> <span class="align-middle">Deutsche</span>
-                        </a>
-
-                        <!-- item-->
-                        <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="it"
-                            title="Italian">
-                            <img src="{ asset('admin/assets/images/flags/italy.svg"') }} alt="user-image" class="me-2 rounded" height="18">
-                            <span class="align-middle">Italiana</span>
-                        </a>
-
-                        <!-- item-->
-                        <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="ru"
-                            title="Russian">
-                            <img src="{ asset('admin/assets/images/flags/russia.svg') }}" alt="user-image" class="me-2 rounded" height="18">
-                            <span class="align-middle">русский</span>
-                        </a>
-
-                        <!-- item-->
-                        <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="ch"
-                            title="Chinese">
-                            <img src="{ asset('admin/assets/images/flags/china.svg"') }} alt="user-image" class="me-2 rounded" height="18">
-                            <span class="align-middle">中国人</span>
-                        </a>
-
-                        <!-- item-->
-                        <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="fr"
-                            title="French">
-                            <img src="{ asset('admin/assets/images/flags/french.svg') }}" alt="user-image" class="me-2 rounded" height="18">
-                            <span class="align-middle">français</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="dropdown topbar-head-dropdown ms-1 header-item">
-                    <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle"
-                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class='bx bx-category-alt fs-22'></i>
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-lg p-0 dropdown-menu-end">
-                        <div class="p-3 border-top-0 border-start-0 border-end-0 border-dashed border">
-                            <div class="row align-items-center">
-                                <div class="col">
-                                    <h6 class="m-0 fw-semibold fs-15"> Web Apps </h6>
-                                </div>
-                                <div class="col-auto">
-                                    <a href="#!" class="btn btn-sm btn-soft-info"> View All Apps
-                                        <i class="ri-arrow-right-s-line align-middle"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-2">
-                            <div class="row g-0">
-                                <div class="col">
-                                    <a class="dropdown-icon-item" href="#!">
-                                        <img src="{{ asset('admin/assets/images/brands/github.png') }}" alt="Github">
-                                        <span>GitHub</span>
-                                    </a>
-                                </div>
-                                <div class="col">
-                                    <a class="dropdown-icon-item" href="#!">
-                                        <img src="{{ asset('admin/assets/images/brands/bitbucket.png') }}" alt="bitbucket">
-                                        <span>Bitbucket</span>
-                                    </a>
-                                </div>
-                                <div class="col">
-                                    <a class="dropdown-icon-item" href="#!">
-                                        <img src="{{ asset('admin/assets/images/brands/dribbble.png') }}" alt="dribbble">
-                                        <span>Dribbble</span>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="row g-0">
-                                <div class="col">
-                                    <a class="dropdown-icon-item" href="#!">
-                                        <img src="{{ asset('admin/assets/images/brands/dropbox.png') }}" alt="dropbox">
-                                        <span>Dropbox</span>
-                                    </a>
-                                </div>
-                                <div class="col">
-                                    <a class="dropdown-icon-item" href="#!">
-                                        <img src="{{ asset('admin/assets/images/brands/mail_chimp.png') }}" alt="mail_chimp">
-                                        <span>Mail Chimp</span>
-                                    </a>
-                                </div>
-                                <div class="col">
-                                    <a class="dropdown-icon-item" href="#!">
-                                        <img src="{{ asset('admin/assets/images/brands/slack.png') }}" alt="slack">
-                                        <span>Slack</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="dropdown topbar-head-dropdown ms-1 header-item">
-                    <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle"
-                        id="page-header-cart-dropdown" data-bs-toggle="dropdown" data-bs-auto-close="outside"
-                        aria-haspopup="true" aria-expanded="false">
-                        <i class='bx bx-shopping-bag fs-22'></i>
-                        <span
-                            class="position-absolute topbar-badge cartitem-badge fs-10 translate-middle badge rounded-pill bg-info">5</span>
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-xl dropdown-menu-end p-0 dropdown-menu-cart"
-                        aria-labelledby="page-header-cart-dropdown">
-                        <div class="p-3 border-top-0 border-start-0 border-end-0 border-dashed border">
-                            <div class="row align-items-center">
-                                <div class="col">
-                                    <h6 class="m-0 fs-16 fw-semibold"> My Cart</h6>
-                                </div>
-                                <div class="col-auto">
-                                    <span class="badge badge-soft-warning fs-13"><span class="cartitem-badge">7</span>
-                                        items</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div data-simplebar style="max-height: 300px;">
-                            <div class="p-2">
-                                <div class="text-center empty-cart" id="empty-cart">
-                                    <div class="avatar-md mx-auto my-3">
-                                        <div class="avatar-title bg-soft-info text-info fs-36 rounded-circle">
-                                            <i class='bx bx-cart'></i>
-                                        </div>
-                                    </div>
-                                    <h5 class="mb-3">Your Cart is Empty!</h5>
-                                    <a href="apps-ecommerce-products.html" class="btn btn-success w-md mb-3">Shop Now</a>
-                                </div>
-                                <div class="d-block dropdown-item dropdown-item-cart text-wrap px-3 py-2">
-                                    <div class="d-flex align-items-center">
-                                        <img src="{{ asset('admin/assets/images/products/img-1.png') }}"
-                                            class="me-3 rounded-circle avatar-sm p-2 bg-light" alt="user-pic">
-                                        <div class="flex-1">
-                                            <h6 class="mt-0 mb-1 fs-14">
-                                                <a href="apps-ecommerce-product-details.html" class="text-reset">Branded
-                                                    T-Shirts</a>
-                                            </h6>
-                                            <p class="mb-0 fs-12 text-muted">
-                                                Quantity: <span>10 x $32</span>
-                                            </p>
-                                        </div>
-                                        <div class="px-2">
-                                            <h5 class="m-0 fw-normal">$<span class="cart-item-price">320</span></h5>
-                                        </div>
-                                        <div class="ps-2">
-                                            <button type="button"
-                                                class="btn btn-icon btn-sm btn-ghost-secondary remove-item-btn"><i
-                                                    class="ri-close-fill fs-16"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="d-block dropdown-item dropdown-item-cart text-wrap px-3 py-2">
-                                    <div class="d-flex align-items-center">
-                                        <img src="{{ asset('admin/assets/images/products/img-2.png') }}"
-                                            class="me-3 rounded-circle avatar-sm p-2 bg-light" alt="user-pic">
-                                        <div class="flex-1">
-                                            <h6 class="mt-0 mb-1 fs-14">
-                                                <a href="apps-ecommerce-product-details.html"
-                                                    class="text-reset">Bentwood Chair</a>
-                                            </h6>
-                                            <p class="mb-0 fs-12 text-muted">
-                                                Quantity: <span>5 x $18</span>
-                                            </p>
-                                        </div>
-                                        <div class="px-2">
-                                            <h5 class="m-0 fw-normal">$<span class="cart-item-price">89</span></h5>
-                                        </div>
-                                        <div class="ps-2">
-                                            <button type="button"
-                                                class="btn btn-icon btn-sm btn-ghost-secondary remove-item-btn"><i
-                                                    class="ri-close-fill fs-16"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="d-block dropdown-item dropdown-item-cart text-wrap px-3 py-2">
-                                    <div class="d-flex align-items-center">
-                                        <img src="{{ asset('admin/assets/images/products/img-3.png') }}"
-                                            class="me-3 rounded-circle avatar-sm p-2 bg-light" alt="user-pic">
-                                        <div class="flex-1">
-                                            <h6 class="mt-0 mb-1 fs-14">
-                                                <a href="apps-ecommerce-product-details.html" class="text-reset">
-                                                    Borosil Paper Cup</a>
-                                            </h6>
-                                            <p class="mb-0 fs-12 text-muted">
-                                                Quantity: <span>3 x $250</span>
-                                            </p>
-                                        </div>
-                                        <div class="px-2">
-                                            <h5 class="m-0 fw-normal">$<span class="cart-item-price">750</span></h5>
-                                        </div>
-                                        <div class="ps-2">
-                                            <button type="button"
-                                                class="btn btn-icon btn-sm btn-ghost-secondary remove-item-btn"><i
-                                                    class="ri-close-fill fs-16"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="d-block dropdown-item dropdown-item-cart text-wrap px-3 py-2">
-                                    <div class="d-flex align-items-center">
-                                        <img src="{{ asset('admin/assets/images/products/img-6.png') }}"
-                                            class="me-3 rounded-circle avatar-sm p-2 bg-light" alt="user-pic">
-                                        <div class="flex-1">
-                                            <h6 class="mt-0 mb-1 fs-14">
-                                                <a href="apps-ecommerce-product-details.html" class="text-reset">Gray
-                                                    Styled T-Shirt</a>
-                                            </h6>
-                                            <p class="mb-0 fs-12 text-muted">
-                                                Quantity: <span>1 x $1250</span>
-                                            </p>
-                                        </div>
-                                        <div class="px-2">
-                                            <h5 class="m-0 fw-normal">$ <span class="cart-item-price">1250</span></h5>
-                                        </div>
-                                        <div class="ps-2">
-                                            <button type="button"
-                                                class="btn btn-icon btn-sm btn-ghost-secondary remove-item-btn"><i
-                                                    class="ri-close-fill fs-16"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="d-block dropdown-item dropdown-item-cart text-wrap px-3 py-2">
-                                    <div class="d-flex align-items-center">
-                                        <img src="{{ asset('admin/assets/images/products/img-5.png') }}"
-                                            class="me-3 rounded-circle avatar-sm p-2 bg-light" alt="user-pic">
-                                        <div class="flex-1">
-                                            <h6 class="mt-0 mb-1 fs-14">
-                                                <a href="apps-ecommerce-product-details.html"
-                                                    class="text-reset">Stillbird Helmet</a>
-                                            </h6>
-                                            <p class="mb-0 fs-12 text-muted">
-                                                Quantity: <span>2 x $495</span>
-                                            </p>
-                                        </div>
-                                        <div class="px-2">
-                                            <h5 class="m-0 fw-normal">$<span class="cart-item-price">990</span></h5>
-                                        </div>
-                                        <div class="ps-2">
-                                            <button type="button"
-                                                class="btn btn-icon btn-sm btn-ghost-secondary remove-item-btn"><i
-                                                    class="ri-close-fill fs-16"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="p-3 border-bottom-0 border-start-0 border-end-0 border-dashed border"
-                            id="checkout-elem">
-                            <div class="d-flex justify-content-between align-items-center pb-3">
-                                <h5 class="m-0 text-muted">Total:</h5>
-                                <div class="px-2">
-                                    <h5 class="m-0" id="cart-item-total">$1258.58</h5>
-                                </div>
-                            </div>
-
-                            <a href="apps-ecommerce-checkout.html" class="btn btn-success text-center w-100">
-                                Checkout
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="ms-1 header-item d-none d-sm-flex">
                     <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle"
                         data-toggle="fullscreen">
@@ -468,7 +176,7 @@
                     </button>
                 </div>
 
-                <div class="dropdown topbar-head-dropdown ms-1 header-item">
+                {{-- <div class="dropdown topbar-head-dropdown ms-1 header-item">
                     <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle"
                         id="page-header-notifications-dropdown" data-bs-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
@@ -766,7 +474,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
                 <div class="dropdown ms-sm-3 header-item topbar-user">
                     <button type="button" class="btn" id="page-header-user-dropdown" data-bs-toggle="dropdown"
@@ -786,23 +494,6 @@
                         <a class="dropdown-item" href="pages-profile.html"><i
                                 class="mdi mdi-account-circle text-muted fs-16 align-middle me-1"></i> <span
                                 class="align-middle">Profile</span></a>
-                        <a class="dropdown-item" href="apps-chat.html"><i
-                                class="mdi mdi-message-text-outline text-muted fs-16 align-middle me-1"></i> <span
-                                class="align-middle">Messages</span></a>
-                        <a class="dropdown-item" href="apps-tasks-kanban.html"><i
-                                class="mdi mdi-calendar-check-outline text-muted fs-16 align-middle me-1"></i> <span
-                                class="align-middle">Taskboard</span></a>
-                        <a class="dropdown-item" href="pages-faqs.html"><i
-                                class="mdi mdi-lifebuoy text-muted fs-16 align-middle me-1"></i> <span
-                                class="align-middle">Help</span></a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="pages-profile.html"><i
-                                class="mdi mdi-wallet text-muted fs-16 align-middle me-1"></i> <span
-                                class="align-middle">Balance : <b>$5971.67</b></span></a>
-                        <a class="dropdown-item" href="pages-profile-settings.html"><span
-                                class="badge bg-soft-success text-success mt-1 float-end">New</span><i
-                                class="mdi mdi-cog-outline text-muted fs-16 align-middle me-1"></i> <span
-                                class="align-middle">Settings</span></a>
                         <a class="dropdown-item" href="auth-lockscreen-basic.html"><i
                                 class="mdi mdi-lock text-muted fs-16 align-middle me-1"></i> <span
                                 class="align-middle">Lock screen</span></a>
@@ -1830,27 +1521,19 @@
                                     <div class="col-12">
                                         <div class="d-flex align-items-lg-center flex-lg-row flex-column">
                                             <div class="flex-grow-1">
-                                                <h4 class="fs-16 mb-1">Good Morning, Anna!</h4>
-                                                <p class="text-muted mb-0">Here's what's happening with your store today.</p>
+                                                <h4 class="fs-16 mb-1">{!! $ucapan !!}, {!! Auth::user()->name !!}!</h4>
+                                                <p class="text-muted mb-0">{!! $quotes->name !!}</p>
                                             </div>
                                             <div class="mt-3 mt-lg-0">
                                                 <form action="javascript:void(0);">
                                                     <div class="row g-3 mb-0 align-items-center">
                                                         <div class="col-sm-auto">
                                                             <div class="input-group">
-                                                                <input type="text" class="form-control border-0 dash-filter-picker shadow" data-provider="flatpickr" data-range-date="true" data-date-format="d M, Y" data-deafult-date="01 Jan 2022 to 31 Jan 2022">
+                                                                <input type="text" class="form-control border-0 dash-filter-picker shadow" value="{!! $tglsekarang !!}" readonly>
                                                                 <div class="input-group-text bg-primary border-primary text-white">
                                                                     <i class="ri-calendar-2-line"></i>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                        <!--end col-->
-                                                        <div class="col-auto">
-                                                            <button type="button" class="btn btn-soft-success"><i class="ri-add-circle-line align-middle me-1"></i> Add Product</button>
-                                                        </div>
-                                                        <!--end col-->
-                                                        <div class="col-auto">
-                                                            <button type="button" class="btn btn-soft-info btn-icon waves-effect waves-light layout-rightside-btn"><i class="ri-pulse-line"></i></button>
                                                         </div>
                                                         <!--end col-->
                                                     </div>
@@ -1982,110 +1665,6 @@
                                 </div> <!-- end row-->
 
                                 <div class="row">
-                                    <div class="col-xl-8">
-                                        <div class="card">
-                                            <div class="card-header border-0 align-items-center d-flex">
-                                                <h4 class="card-title mb-0 flex-grow-1">Revenue</h4>
-                                                <div>
-                                                    <button type="button" class="btn btn-soft-secondary btn-sm">
-                                                        ALL
-                                                    </button>
-                                                    <button type="button" class="btn btn-soft-secondary btn-sm">
-                                                        1M
-                                                    </button>
-                                                    <button type="button" class="btn btn-soft-secondary btn-sm">
-                                                        6M
-                                                    </button>
-                                                    <button type="button" class="btn btn-soft-primary btn-sm">
-                                                        1Y
-                                                    </button>
-                                                </div>
-                                            </div><!-- end card header -->
-
-                                            <div class="card-header p-0 border-0 bg-soft-light">
-                                                <div class="row g-0 text-center">
-                                                    <div class="col-6 col-sm-3">
-                                                        <div class="p-3 border border-dashed border-start-0">
-                                                            <h5 class="mb-1"><span class="counter-value" data-target="7585">0</span></h5>
-                                                            <p class="text-muted mb-0">Orders</p>
-                                                        </div>
-                                                    </div>
-                                                    <!--end col-->
-                                                    <div class="col-6 col-sm-3">
-                                                        <div class="p-3 border border-dashed border-start-0">
-                                                            <h5 class="mb-1">$<span class="counter-value" data-target="22.89">0</span>k</h5>
-                                                            <p class="text-muted mb-0">Earnings</p>
-                                                        </div>
-                                                    </div>
-                                                    <!--end col-->
-                                                    <div class="col-6 col-sm-3">
-                                                        <div class="p-3 border border-dashed border-start-0">
-                                                            <h5 class="mb-1"><span class="counter-value" data-target="367">0</span></h5>
-                                                            <p class="text-muted mb-0">Refunds</p>
-                                                        </div>
-                                                    </div>
-                                                    <!--end col-->
-                                                    <div class="col-6 col-sm-3">
-                                                        <div class="p-3 border border-dashed border-start-0 border-end-0">
-                                                            <h5 class="mb-1 text-success"><span class="counter-value" data-target="18.92">0</span>%</h5>
-                                                            <p class="text-muted mb-0">Conversation Ratio</p>
-                                                        </div>
-                                                    </div>
-                                                    <!--end col-->
-                                                </div>
-                                            </div><!-- end card header -->
-
-                                            <div class="card-body p-0 pb-2">
-                                                <div class="w-100">
-                                                    <div id="customer_impression_charts" data-colors='["--vz-primary", "--vz-success", "--vz-danger"]' class="apex-charts" dir="ltr"></div>
-                                                </div>
-                                            </div><!-- end card body -->
-                                        </div><!-- end card -->
-                                    </div><!-- end col -->
-
-                                    <div class="col-xl-4">
-                                        <!-- card -->
-                                        <div class="card card-height-100">
-                                            <div class="card-header align-items-center d-flex">
-                                                <h4 class="card-title mb-0 flex-grow-1">Sales by Locations</h4>
-                                                <div class="flex-shrink-0">
-                                                    <button type="button" class="btn btn-soft-primary btn-sm">
-                                                        Export Report
-                                                    </button>
-                                                </div>
-                                            </div><!-- end card header -->
-
-                                            <!-- card body -->
-                                            <div class="card-body">
-
-                                                <div id="sales-by-locations" data-colors='["--vz-light", "--vz-success", "--vz-primary"]' style="height: 269px" dir="ltr"></div>
-
-                                                <div class="px-2 py-2 mt-1">
-                                                    <p class="mb-1">Canada <span class="float-end">75%</span></p>
-                                                    <div class="progress mt-2" style="height: 6px;">
-                                                        <div class="progress-bar progress-bar-striped bg-primary" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="75"></div>
-                                                    </div>
-
-                                                    <p class="mt-3 mb-1">Greenland <span class="float-end">47%</span>
-                                                    </p>
-                                                    <div class="progress mt-2" style="height: 6px;">
-                                                        <div class="progress-bar progress-bar-striped bg-primary" role="progressbar" style="width: 47%" aria-valuenow="47" aria-valuemin="0" aria-valuemax="47"></div>
-                                                    </div>
-
-                                                    <p class="mt-3 mb-1">Russia <span class="float-end">82%</span></p>
-                                                    <div class="progress mt-2" style="height: 6px;">
-                                                        <div class="progress-bar progress-bar-striped bg-primary" role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="82"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- end card body -->
-                                        </div>
-                                        <!-- end card -->
-                                    </div>
-                                    <!-- end col -->
-                                </div>
-
-                                <div class="row">
                                     <div class="col-xl-6">
                                         <div class="card">
                                             <div class="card-header align-items-center d-flex">
@@ -2145,7 +1724,7 @@
                                                                 <td>
                                                                     <div class="d-flex align-items-center">
                                                                         <div class="avatar-sm bg-light rounded p-1 me-2">
-                                                                            <img src="assets/images/products/img-2.png" alt="" class="img-fluid d-block" />
+                                                                            <img src="{{ asset('admin/assets/images/products/img-2.png') }}" alt="" class="img-fluid d-block" />
                                                                         </div>
                                                                         <div>
                                                                             <h5 class="fs-14 my-1"><a href="apps-ecommerce-product-details.html" class="text-reset">Bentwood Chair</a></h5>
@@ -2174,7 +1753,7 @@
                                                                 <td>
                                                                     <div class="d-flex align-items-center">
                                                                         <div class="avatar-sm bg-light rounded p-1 me-2">
-                                                                            <img src="assets/images/products/img-3.png" alt="" class="img-fluid d-block" />
+                                                                            <img src="{{ asset('admin/assets/images/products/img-3.png') }}" alt="" class="img-fluid d-block" />
                                                                         </div>
                                                                         <div>
                                                                             <h5 class="fs-14 my-1"><a href="apps-ecommerce-product-details.html" class="text-reset">Borosil Paper Cup</a></h5>
@@ -2203,7 +1782,7 @@
                                                                 <td>
                                                                     <div class="d-flex align-items-center">
                                                                         <div class="avatar-sm bg-light rounded p-1 me-2">
-                                                                            <img src="assets/images/products/img-4.png" alt="" class="img-fluid d-block" />
+                                                                            <img src="{{ asset('admin/assets/images/products/img-4.png') }}" alt="" class="img-fluid d-block" />
                                                                         </div>
                                                                         <div>
                                                                             <h5 class="fs-14 my-1"><a href="apps-ecommerce-product-details.html" class="text-reset">One Seater Sofa</a></h5>
@@ -2232,7 +1811,7 @@
                                                                 <td>
                                                                     <div class="d-flex align-items-center">
                                                                         <div class="avatar-sm bg-light rounded p-1 me-2">
-                                                                            <img src="assets/images/products/img-5.png" alt="" class="img-fluid d-block" />
+                                                                            <img src="{{ asset('admin/assets/images/products/img-5.png') }}" alt="" class="img-fluid d-block" />
                                                                         </div>
                                                                         <div>
                                                                             <h5 class="fs-14 my-1"><a href="apps-ecommerce-product-details.html" class="text-reset">Stillbird Helmet</a></h5>
@@ -2316,7 +1895,7 @@
                                                                 <td>
                                                                     <div class="d-flex align-items-center">
                                                                         <div class="flex-shrink-0 me-2">
-                                                                            <img src="assets/images/companies/img-1.png" alt="" class="avatar-sm p-2" />
+                                                                            <img src="{{ asset('admin/assets/images/companies/img-1.png')  }}" alt="" class="avatar-sm p-2" />
                                                                         </div>
                                                                         <div>
                                                                             <h5 class="fs-14 my-1 fw-medium">
@@ -2344,7 +1923,7 @@
                                                                 <td>
                                                                     <div class="d-flex align-items-center">
                                                                         <div class="flex-shrink-0 me-2">
-                                                                            <img src="assets/images/companies/img-2.png" alt="" class="avatar-sm p-2" />
+                                                                            <img src="{{ asset('admin/assets/images/companies/img-2.png')  }}" alt="" class="avatar-sm p-2" />
                                                                         </div>
                                                                         <div class="flex-grow-1">
                                                                             <h5 class="fs-14 my-1 fw-medium"><a href="apps-ecommerce-seller-details.html" class="text-reset">Digitech Galaxy</a></h5>
@@ -2370,7 +1949,7 @@
                                                                 <td>
                                                                     <div class="d-flex align-items-center">
                                                                         <div class="flex-shrink-0 me-2">
-                                                                            <img src="assets/images/companies/img-3.png" alt="" class="avatar-sm p-2" />
+                                                                            <img src="{{ asset('admin/assets/images/companies/img-3.png')  }}" alt="" class="avatar-sm p-2" />
                                                                         </div>
                                                                         <div class="flex-gow-1">
                                                                             <h5 class="fs-14 my-1 fw-medium"><a href="apps-ecommerce-seller-details.html" class="text-reset">Nesta Technologies</a></h5>
@@ -2396,7 +1975,7 @@
                                                                 <td>
                                                                     <div class="d-flex align-items-center">
                                                                         <div class="flex-shrink-0 me-2">
-                                                                            <img src="assets/images/companies/img-8.png" alt="" class="avatar-sm p-2" />
+                                                                            <img src="{{ asset('admin/assets/images/companies/img-8.png')  }}" alt="" class="avatar-sm p-2" />
                                                                         </div>
                                                                         <div class="flex-grow-1">
                                                                             <h5 class="fs-14 my-1 fw-medium"><a href="apps-ecommerce-seller-details.html" class="text-reset">Zoetic Fashion</a></h5>
@@ -2422,7 +2001,7 @@
                                                                 <td>
                                                                     <div class="d-flex align-items-center">
                                                                         <div class="flex-shrink-0 me-2">
-                                                                            <img src="assets/images/companies/img-5.png" alt="" class="avatar-sm p-2" />
+                                                                            <img src="{{ asset('admin/assets/images/companies/img-5.png')  }}" alt="" class="avatar-sm p-2" />
                                                                         </div>
                                                                         <div class="flex-grow-1">
                                                                             <h5 class="fs-14 my-1 fw-medium">
@@ -2480,185 +2059,6 @@
                                     </div> <!-- .col-->
                                 </div> <!-- end row-->
 
-                                <div class="row">
-                                    <div class="col-xl-4">
-                                        <div class="card card-height-100">
-                                            <div class="card-header align-items-center d-flex">
-                                                <h4 class="card-title mb-0 flex-grow-1">Store Visits by Source</h4>
-                                                <div class="flex-shrink-0">
-                                                    <div class="dropdown card-header-dropdown">
-                                                        <a class="text-reset dropdown-btn" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            <span class="text-muted">Report<i class="mdi mdi-chevron-down ms-1"></i></span>
-                                                        </a>
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a class="dropdown-item" href="#">Download Report</a>
-                                                            <a class="dropdown-item" href="#">Export</a>
-                                                            <a class="dropdown-item" href="#">Import</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div><!-- end card header -->
-
-                                            <div class="card-body">
-                                                <div id="store-visits-source" data-colors='["--vz-primary", "--vz-success", "--vz-warning", "--vz-danger", "--vz-info"]' class="apex-charts" dir="ltr"></div>
-                                            </div>
-                                        </div> <!-- .card-->
-                                    </div> <!-- .col-->
-
-                                    <div class="col-xl-8">
-                                        <div class="card">
-                                            <div class="card-header align-items-center d-flex">
-                                                <h4 class="card-title mb-0 flex-grow-1">Recent Orders</h4>
-                                                <div class="flex-shrink-0">
-                                                    <button type="button" class="btn btn-soft-info btn-sm">
-                                                        <i class="ri-file-list-3-line align-middle"></i> Generate Report
-                                                    </button>
-                                                </div>
-                                            </div><!-- end card header -->
-
-                                            <div class="card-body">
-                                                <div class="table-responsive table-card">
-                                                    <table class="table table-borderless table-centered align-middle table-nowrap mb-0">
-                                                        <thead class="text-muted table-light">
-                                                            <tr>
-                                                                <th scope="col">Order ID</th>
-                                                                <th scope="col">Customer</th>
-                                                                <th scope="col">Product</th>
-                                                                <th scope="col">Amount</th>
-                                                                <th scope="col">Vendor</th>
-                                                                <th scope="col">Status</th>
-                                                                <th scope="col">Rating</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>
-                                                                    <a href="apps-ecommerce-order-details.html" class="fw-medium link-primary">#VZ2112</a>
-                                                                </td>
-                                                                <td>
-                                                                    <div class="d-flex align-items-center">
-                                                                        <div class="flex-shrink-0 me-2">
-                                                                            <img src="assets/images/users/avatar-1.jpg" alt="" class="avatar-xs rounded-circle" />
-                                                                        </div>
-                                                                        <div class="flex-grow-1">Alex Smith</div>
-                                                                    </div>
-                                                                </td>
-                                                                <td>Clothes</td>
-                                                                <td>
-                                                                    <span class="text-success">$109.00</span>
-                                                                </td>
-                                                                <td>Zoetic Fashion</td>
-                                                                <td>
-                                                                    <span class="badge badge-soft-success">Paid</span>
-                                                                </td>
-                                                                <td>
-                                                                    <h5 class="fs-14 fw-medium mb-0">5.0<span class="text-muted fs-11 ms-1">(61 votes)</span></h5>
-                                                                </td>
-                                                            </tr><!-- end tr -->
-                                                            <tr>
-                                                                <td>
-                                                                    <a href="apps-ecommerce-order-details.html" class="fw-medium link-primary">#VZ2111</a>
-                                                                </td>
-                                                                <td>
-                                                                    <div class="d-flex align-items-center">
-                                                                        <div class="flex-shrink-0 me-2">
-                                                                            <img src="assets/images/users/avatar-2.jpg" alt="" class="avatar-xs rounded-circle" />
-                                                                        </div>
-                                                                        <div class="flex-grow-1">Jansh Brown</div>
-                                                                    </div>
-                                                                </td>
-                                                                <td>Kitchen Storage</td>
-                                                                <td>
-                                                                    <span class="text-success">$149.00</span>
-                                                                </td>
-                                                                <td>Micro Design</td>
-                                                                <td>
-                                                                    <span class="badge badge-soft-warning">Pending</span>
-                                                                </td>
-                                                                <td>
-                                                                    <h5 class="fs-14 fw-medium mb-0">4.5<span class="text-muted fs-11 ms-1">(61 votes)</span></h5>
-                                                                </td>
-                                                            </tr><!-- end tr -->
-                                                            <tr>
-                                                                <td>
-                                                                    <a href="apps-ecommerce-order-details.html" class="fw-medium link-primary">#VZ2109</a>
-                                                                </td>
-                                                                <td>
-                                                                    <div class="d-flex align-items-center">
-                                                                        <div class="flex-shrink-0 me-2">
-                                                                            <img src="assets/images/users/avatar-3.jpg" alt="" class="avatar-xs rounded-circle" />
-                                                                        </div>
-                                                                        <div class="flex-grow-1">Ayaan Bowen</div>
-                                                                    </div>
-                                                                </td>
-                                                                <td>Bike Accessories</td>
-                                                                <td>
-                                                                    <span class="text-success">$215.00</span>
-                                                                </td>
-                                                                <td>Nesta Technologies</td>
-                                                                <td>
-                                                                    <span class="badge badge-soft-success">Paid</span>
-                                                                </td>
-                                                                <td>
-                                                                    <h5 class="fs-14 fw-medium mb-0">4.9<span class="text-muted fs-11 ms-1">(89 votes)</span></h5>
-                                                                </td>
-                                                            </tr><!-- end tr -->
-                                                            <tr>
-                                                                <td>
-                                                                    <a href="apps-ecommerce-order-details.html" class="fw-medium link-primary">#VZ2108</a>
-                                                                </td>
-                                                                <td>
-                                                                    <div class="d-flex align-items-center">
-                                                                        <div class="flex-shrink-0 me-2">
-                                                                            <img src="assets/images/users/avatar-4.jpg" alt="" class="avatar-xs rounded-circle" />
-                                                                        </div>
-                                                                        <div class="flex-grow-1">Prezy Mark</div>
-                                                                    </div>
-                                                                </td>
-                                                                <td>Furniture</td>
-                                                                <td>
-                                                                    <span class="text-success">$199.00</span>
-                                                                </td>
-                                                                <td>Syntyce Solutions</td>
-                                                                <td>
-                                                                    <span class="badge badge-soft-danger">Unpaid</span>
-                                                                </td>
-                                                                <td>
-                                                                    <h5 class="fs-14 fw-medium mb-0">4.3<span class="text-muted fs-11 ms-1">(47 votes)</span></h5>
-                                                                </td>
-                                                            </tr><!-- end tr -->
-                                                            <tr>
-                                                                <td>
-                                                                    <a href="apps-ecommerce-order-details.html" class="fw-medium link-primary">#VZ2107</a>
-                                                                </td>
-                                                                <td>
-                                                                    <div class="d-flex align-items-center">
-                                                                        <div class="flex-shrink-0 me-2">
-                                                                            <img src="assets/images/users/avatar-6.jpg" alt="" class="avatar-xs rounded-circle" />
-                                                                        </div>
-                                                                        <div class="flex-grow-1">Vihan Hudda</div>
-                                                                    </div>
-                                                                </td>
-                                                                <td>Bags and Wallets</td>
-                                                                <td>
-                                                                    <span class="text-success">$330.00</span>
-                                                                </td>
-                                                                <td>iTest Factory</td>
-                                                                <td>
-                                                                    <span class="badge badge-soft-success">Paid</span>
-                                                                </td>
-                                                                <td>
-                                                                    <h5 class="fs-14 fw-medium mb-0">4.7<span class="text-muted fs-11 ms-1">(161 votes)</span></h5>
-                                                                </td>
-                                                            </tr><!-- end tr -->
-                                                        </tbody><!-- end tbody -->
-                                                    </table><!-- end table -->
-                                                </div>
-                                            </div>
-                                        </div> <!-- .card-->
-                                    </div> <!-- .col-->
-                                </div> <!-- end row-->
-
                             </div> <!-- end .h-100-->
 
                         </div> <!-- end col -->
@@ -2696,13 +2096,13 @@
                                                         <p class="text-muted mb-1">By Nesta Technologies</p>
                                                         <div class="d-inline-flex gap-2 border border-dashed p-2 mb-2">
                                                             <a href="apps-ecommerce-product-details.html" class="bg-light rounded p-1">
-                                                                <img src="assets/images/products/img-8.png" alt="" class="img-fluid d-block" />
+                                                                <img src="{{ asset('admin/assets/images/products/img-8.png') }}" alt="" class="img-fluid d-block" />
                                                             </a>
                                                             <a href="apps-ecommerce-product-details.html" class="bg-light rounded p-1">
-                                                                <img src="assets/images/products/img-2.png" alt="" class="img-fluid d-block" />
+                                                                <img src="{{ asset('admin/assets/images/products/img-2.png') }}" alt="" class="img-fluid d-block" />
                                                             </a>
                                                             <a href="apps-ecommerce-product-details.html" class="bg-light rounded p-1">
-                                                                <img src="assets/images/products/img-10.png" alt="" class="img-fluid d-block" />
+                                                                <img src="{{ asset('admin/assets/images/products/img-10.png') }}" alt="" class="img-fluid d-block" />
                                                             </a>
                                                         </div>
                                                         <p class="mb-0 text-muted"><small>9:47 PM Yesterday</small></p>
@@ -2710,7 +2110,7 @@
                                                 </div>
                                                 <div class="acitivity-item py-3 d-flex">
                                                     <div class="flex-shrink-0">
-                                                        <img src="assets/images/users/avatar-2.jpg" alt="" class="avatar-xs rounded-circle acitivity-avatar">
+                                                        <img src="{{ asset('admin/assets/images/users/avatar-2.jpg')  }}" alt="" class="avatar-xs rounded-circle acitivity-avatar">
                                                     </div>
                                                     <div class="flex-grow-1 ms-3">
                                                         <h6 class="mb-1 lh-base">Natasha Carey have liked the products</h6>
@@ -2776,7 +2176,7 @@
                                                 </div>
                                                 <div class="acitivity-item d-flex">
                                                     <div class="flex-shrink-0">
-                                                        <img src="assets/images/users/avatar-3.jpg" alt="" class="avatar-xs rounded-circle acitivity-avatar" />
+                                                        <img src="{{ asset('admin/assets/images/users/avatar-3.jpg')  }}" alt="" class="avatar-xs rounded-circle acitivity-avatar" />
                                                     </div>
                                                     <div class="flex-grow-1 ms-3">
                                                         <h6 class="mb-1 lh-base">Frank Hook Commented</h6>
@@ -2838,7 +2238,7 @@
                                                                 <div class="d-flex">
                                                                     <div class="flex-shrink-0 avatar-sm">
                                                                         <div class="avatar-title bg-light rounded">
-                                                                            <img src="assets/images/companies/img-1.png" alt="" height="30">
+                                                                            <img src="{{ asset('admin/assets/images/companies/img-1.png') }}" alt="" height="30">
                                                                         </div>
                                                                     </div>
                                                                     <div class="flex-grow-1 ms-3">
@@ -2866,7 +2266,7 @@
                                                             <div class="card-body">
                                                                 <div class="d-flex">
                                                                     <div class="flex-shrink-0">
-                                                                        <img src="assets/images/users/avatar-3.jpg" alt="" class="avatar-sm rounded">
+                                                                        <img src="{{ asset('admin/assets/images/users/avatar-3.jpg') }}" alt="" class="avatar-sm rounded">
                                                                     </div>
                                                                     <div class="flex-grow-1 ms-3">
                                                                         <div>
@@ -2893,7 +2293,7 @@
                                                                 <div class="d-flex">
                                                                     <div class="flex-shrink-0 avatar-sm">
                                                                         <div class="avatar-title bg-light rounded">
-                                                                            <img src="assets/images/companies/img-8.png" alt="" height="30">
+                                                                            <img src="{{ asset('admin/assets/images/companies/img-8.png') }}" alt="" height="30">
                                                                         </div>
                                                                     </div>
                                                                     <div class="flex-grow-1 ms-3">
@@ -2920,7 +2320,7 @@
                                                             <div class="card-body">
                                                                 <div class="d-flex">
                                                                     <div class="flex-shrink-0">
-                                                                        <img src="assets/images/users/avatar-2.jpg" alt="" class="avatar-sm rounded">
+                                                                        <img src="{{ asset('admin/assets/images/users/avatar-2.jpg') }}" alt="" class="avatar-sm rounded">
                                                                     </div>
                                                                     <div class="flex-grow-1 ms-3">
                                                                         <div>
@@ -3077,7 +2477,7 @@
 
                                         <div class="card sidebar-alert bg-light border-0 text-center mx-4 mb-0 mt-3">
                                             <div class="card-body">
-                                                <img src="assets/images/giftbox.png" alt="">
+                                                <img src="{{ asset('admin/assets/images/giftbox.png') }}" alt="">
                                                 <div class="mt-4">
                                                     <h5>Invite New Seller</h5>
                                                     <p class="text-muted lh-base">Refer a new seller to us and earn $100 per refer.</p>
