@@ -10,6 +10,14 @@ use Yajra\DataTables\Facades\DataTables;
 
 class PenggunaController extends Controller
 {
+    public function __construct()
+    {
+      $this->middleware('permission:pengguna_access', ['only' => ['index']]);
+      $this->middleware('permission:pengguna_create', ['only' => ['create', 'post']]);
+      $this->middleware('permission:pengguna_edit', ['only' => ['edit', 'put']]);
+      $this->middleware('permission:pengguna_delete', ['only' => 'destroy']);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -22,46 +30,46 @@ class PenggunaController extends Controller
 
             return DataTables::of($query)
                 ->addColumn('action', function($item) {
-                    return '
+                  return '
                     <td>
-                            <div class="dropdown d-inline-block">
-                              <button
-                                class="btn btn-soft-secondary btn-sm dropdown"
-                                type="button"
-                                data-bs-toggle="dropdown"
-                                aria-expanded="false"
-                              >
-                                <i class="ri-more-fill align-middle"></i>
-                              </button>
-                              <ul class="dropdown-menu dropdown-menu-end">
-                                <li>
-                                  <a href="#!" class="dropdown-item"
-                                    ><i
-                                      class="ri-eye-fill align-bottom me-2 text-muted"
-                                    ></i>
-                                    View</a
-                                  >
-                                </li>
-                                <li>
-                                  <a class="dropdown-item edit-item-btn"
-                                    ><i
-                                      class="ri-pencil-fill align-bottom me-2 text-muted"
-                                    ></i>
-                                    Edit</a
-                                  >
-                                </li>
-                                <li>
-                                  <a class="dropdown-item remove-item-btn">
-                                    <i
-                                      class="ri-delete-bin-fill align-bottom me-2 text-muted"
-                                    ></i>
-                                    Delete
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                          </td>
-                        ';
+                      <div class="dropdown d-inline-block">
+                        <button
+                          class="btn btn-soft-secondary btn-sm dropdown"
+                          type="button"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <i class="ri-more-fill align-middle"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                          <li>
+                            <a href="#!" class="dropdown-item"
+                              ><i
+                                class="ri-eye-fill align-bottom me-2 text-muted"
+                              ></i>
+                              View</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item edit-item-btn"
+                              ><i
+                                class="ri-pencil-fill align-bottom me-2 text-muted"
+                              ></i>
+                              Edit</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item remove-item-btn">
+                              <i
+                                class="ri-delete-bin-fill align-bottom me-2 text-muted"
+                              ></i>
+                              Delete
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  ';
                 })
                 ->rawColumns(['action'])
                 ->addIndexColumn()
@@ -77,7 +85,7 @@ class PenggunaController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.pages.user.create');
     }
 
     /**

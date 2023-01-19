@@ -19,9 +19,11 @@
           <div class="d-flex align-items-center">
             <h5 class="card-title mb-0 flex-grow-1">Daftar Pengguna</h5>
 
-            <div class="flex-shrink-0">
-              <a class="btn btn-primary add-btn" href="#">Tambah Pengguna</a>
-            </div>
+            @can('pengguna_create')  
+              <div class="flex-shrink-0">
+                <a class="btn btn-primary add-btn" href="{!! route('pengguna.create') !!}">Tambah Pengguna</a>
+              </div>
+            @endcan
           </div>
         </div>
 
