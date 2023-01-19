@@ -8,18 +8,18 @@
   
   <li class="nav-item">
     <a class="nav-link menu-link" href="#Users" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarDashboards">
-        <i class="mdi mdi-account-group"></i> Data Users
+        <i class="mdi mdi-account-group"></i> Data Pengguna
     </a>
-    <div class="collapse menu-dropdown" id="Users">
+    <div class="collapse menu-dropdown @yield('showMenu')" id="Users">
         <ul class="nav nav-sm flex-column">
             <li class="nav-item">
-                <a href="#" class="nav-link active"> User </a>
+                <a href="{!! route('pengguna.index') !!}" class="nav-link @yield('pengguna')"> Pengguna </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link"> Hak Akses </a>
+                <a href="#" class="nav-link @yield('hak-akses')"> Hak Akses </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link"> Jabatan </a>
+                <a href="#" class="nav-link @yield('jabatan')"> Jabatan </a>
             </li>
         </ul>
     </div>

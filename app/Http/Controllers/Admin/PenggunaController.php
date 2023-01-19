@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class PenggunaController extends Controller
 {
@@ -12,10 +12,9 @@ class PenggunaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //index
-        // return view('dashboard/pengguna/user/index');
+        return view('dashboard.pages.user.index');
     }
 
     /**
