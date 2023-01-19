@@ -17,7 +17,7 @@
 <script src="{{ asset('admin/assets/libs/swiper/swiper-bundle.min.js') }}"></script>
 
 <!-- Datatables -->
-<script type="text/javascript" src="{{ asset('admin/assets/vendor/DataTables/datatables.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('admin/assets/vendor/datatables/datatables.min.js') }}"></script>
 
 <!-- App js -->
 <script src="{{ asset('admin/assets/js/app.js') }}"></script>
