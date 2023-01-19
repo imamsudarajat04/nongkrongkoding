@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
+use Yajra\DataTables\Facades\DataTables;
 
 class PenggunaController extends Controller
 {
@@ -14,6 +17,56 @@ class PenggunaController extends Controller
      */
     public function index(Request $request)
     {
+        if(request()->ajax()) {
+            $query = User::all();
+
+            return DataTables::of($query)
+                ->addColumn('action', function($item) {
+                    return '
+                    <td>
+                            <div class="dropdown d-inline-block">
+                              <button
+                                class="btn btn-soft-secondary btn-sm dropdown"
+                                type="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                              >
+                                <i class="ri-more-fill align-middle"></i>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                  <a href="#!" class="dropdown-item"
+                                    ><i
+                                      class="ri-eye-fill align-bottom me-2 text-muted"
+                                    ></i>
+                                    View</a
+                                  >
+                                </li>
+                                <li>
+                                  <a class="dropdown-item edit-item-btn"
+                                    ><i
+                                      class="ri-pencil-fill align-bottom me-2 text-muted"
+                                    ></i>
+                                    Edit</a
+                                  >
+                                </li>
+                                <li>
+                                  <a class="dropdown-item remove-item-btn">
+                                    <i
+                                      class="ri-delete-bin-fill align-bottom me-2 text-muted"
+                                    ></i>
+                                    Delete
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </td>
+                        ';
+                })
+                ->rawColumns(['action'])
+                ->addIndexColumn()
+                ->make();
+        }
         return view('dashboard.pages.user.index');
     }
 
