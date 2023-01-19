@@ -16,7 +16,7 @@
                 <div class="col-12">
                     <div class="d-flex align-items-lg-center flex-lg-row flex-column">
                         <div class="flex-grow-1">
-                            <h4 class="fs-16 mb-1">{!! $ucapan !!}, {!! Auth::user()->name !!}!</h4>
+                            <h4 class="fs-16 mb-1">{!! $ucapan !!}, {!! Auth::user()->name == '' ? 'Anonym' : Auth::user()->name !!}!</h4>
                             <p class="text-muted mb-0">{!! $quotes->name !!}</p>
                         </div>
                         <div class="mt-3 mt-lg-0">
