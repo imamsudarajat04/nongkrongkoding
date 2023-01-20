@@ -124,7 +124,7 @@
             ("twocolumn" != t && "twocolumn" != a["data-layout"]) ||
             ((document.querySelector(".navbar-menu").innerHTML = c),
             ((n = document.createElement("ul")).innerHTML =
-                '<a href="#" class="logo"><img src="assets/images/logo-sm.png" alt="" height="22"></a>'),
+                '<a href="#" class="logo"><img src="admin/assets/images/logo-sm.png" alt="" height="22"></a>'),
             Array.from(
                 document
                     .getElementById("navbar-nav")

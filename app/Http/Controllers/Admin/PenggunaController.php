@@ -3,10 +3,14 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\User;
+use App\Models\Role;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\PenggunaRequest;
 use Illuminate\Support\Facades\Storage;
 use Yajra\DataTables\Facades\DataTables;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class PenggunaController extends Controller
 {
@@ -71,11 +75,42 @@ class PenggunaController extends Controller
                     </td>
                   ';
                 })
-                ->rawColumns(['action'])
+                ->editColumn('avatar', function($item) {
+                  $avatar = Storage::exists('public/' . $item->avatar) && $item->avatar ? Storage::url($item->avatar) : asset('admin/assets/img/avatars/1.png');
+
+                  return '
+                    <div class="image-wrapper">
+                      <div class="image" style="background-image: url(' . $avatar . ')"></div>
+                    </div>
+                  ';
+                })
+                ->rawColumns(['action', 'avatar'])
                 ->addIndexColumn()
                 ->make();
         }
         return view('dashboard.pages.user.index');
+    }
+
+    public function getRole()
+    {
+        // $roles = Role::pluck('id','id')->pluck('name', 'name')->all();
+        $roles = Role::all();
+        
+        if(!empty($roles))
+        {
+          return response()->json([
+            'status' => 200,
+            'msg'    => 'Berhasil',
+            'data'   => $roles
+          ]);
+        }
+        else
+        {
+          return response()->json([
+            'status' => 404,
+            'msg'    => 'Tidak ditemukan',
+          ]);
+        }
     }
 
     /**
@@ -94,9 +129,17 @@ class PenggunaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PenggunaRequest $request)
     {
-        //
+      $data = $request->all();
+      $data['password'] = Hash::make($data['password']);
+      $data['avatar'] = $request->file('avatar')->store('avatar', 'public');
+
+      $user = User::create($data);
+      $user->assignRole($request->input('roles'));
+
+      Alert::success('', 'Pendaftaran Pengguna Berhasil');
+      return redirect()->route('pengguna.index');
     }
 
     /**

@@ -1,4 +1,21 @@
 @extends('dashboard.layout.DashboardLayout')
+@push('customCss')
+  <style>
+  .image-wrapper {
+    height: 100px;
+    width: 100px;
+  }
+
+  .image-wrapper .image {
+      border-radius: 8px;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+  }
+  </style>
+@endpush
 @section('title', 'Halaman Pengguna')
 @section('showMenu', 'show')
 @section('pengguna', 'active')

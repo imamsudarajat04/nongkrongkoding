@@ -45,6 +45,7 @@ Route::group(['middleware' => ['auth']], function() {
 
     //Pengguna
     Route::resource('/data/pengguna', PenggunaController::class);
+    Route::get('getRole', [PenggunaController::class, 'getRole'])->name('getRole');
 
     //Adminn
     Route::resource('/data/admin', AdminController::class);

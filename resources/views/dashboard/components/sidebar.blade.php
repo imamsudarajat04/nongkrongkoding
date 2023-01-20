@@ -6,22 +6,28 @@
                     <i class="ri-dashboard-2-line"></i> <span data-key="t-widgets">Dashboard</span>
                 </a>
             </li> <!-- end Dashboard Menu -->
-        @can('hakakses_access')    
+        @can('menu_access')    
             <li class="nav-item">
                 <a class="nav-link menu-link" href="#Users" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarDashboards">
                     <i class="mdi mdi-account-group"></i> Data Pengguna
                 </a>
                 <div class="collapse menu-dropdown @yield('showMenu')" id="Users">
                     <ul class="nav nav-sm flex-column">
-                        <li class="nav-item">
-                            <a href="{!! route('pengguna.index') !!}" class="nav-link @yield('pengguna')"> Pengguna </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link @yield('hak-akses')"> Hak Akses </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link @yield('jabatan')"> Jabatan </a>
-                        </li>
+                        @can('pengguna_access')    
+                            <li class="nav-item">
+                                <a href="{!! route('pengguna.index') !!}" class="nav-link @yield('pengguna')"> Pengguna </a>
+                            </li>
+                        @endcan
+                        @can('hakakses_access')    
+                            <li class="nav-item">
+                                <a href="#" class="nav-link @yield('hak-akses')"> Hak Akses </a>
+                            </li>
+                        @endcan
+                        @can('jabatan_access')    
+                            <li class="nav-item">
+                                <a href="#" class="nav-link @yield('jabatan')"> Jabatan </a>
+                            </li>
+                        @endcan
                     </ul>
                 </div>
             </li>

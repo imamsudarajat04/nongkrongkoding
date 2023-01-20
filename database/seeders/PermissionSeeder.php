@@ -23,15 +23,24 @@ class PermissionSeeder extends Seeder
         
         // create permissions
         Permission::create(['name' => 'system_management_access', 'guard_name' => 'web']);
+        Permission::create(['name' => 'menu_access', 'guard_name' => 'web']);
         Permission::create(['name' => 'pengguna_access', 'guard_name' => 'web']);
         Permission::create(['name' => 'pengguna_create', 'guard_name' => 'web']);
         Permission::create(['name' => 'pengguna_edit', 'guard_name' => 'web']);
         Permission::create(['name' => 'pengguna_delete', 'guard_name' => 'web']);
         Permission::create(['name' => 'hakakses_access', 'guard_name' => 'web']);
+        Permission::create(['name' => 'hakakses_create', 'guard_name' => 'web']);
+        Permission::create(['name' => 'hakakses_edit', 'guard_name' => 'web']);
+        Permission::create(['name' => 'hakakses_delete', 'guard_name' => 'web']);
+        Permission::create(['name' => 'jabatan_access', 'guard_name' => 'web']);
+        Permission::create(['name' => 'jabatan_create', 'guard_name' => 'web']);
+        Permission::create(['name' => 'jabatan_edit', 'guard_name' => 'web']);
+        Permission::create(['name' => 'jabatan_delete', 'guard_name' => 'web']);
 
         //create roles and assign existing permissions
         $userRole = Role::create(['name' => 'client']);
         $userRole->givePermissionTo('system_management_access');
+        $userRole->givePermissionTo('menu_access');
         $userRole->givePermissionTo('pengguna_access');
         $userRole->givePermissionTo('pengguna_create');
         $userRole->givePermissionTo('pengguna_edit');
