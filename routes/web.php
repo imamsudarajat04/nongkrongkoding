@@ -9,7 +9,6 @@ use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\AdminprofileController;
 use App\Http\Controllers\Admin\VideoController;
 use App\Http\Controllers\Admin\PenggunaController;
-use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\JabatanController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\User\HomeController;
@@ -49,9 +48,6 @@ Route::group(['middleware' => ['auth']], function() {
 
     //Adminn
     Route::resource('/data/admin', AdminController::class);
-
-    //Jabatann
-    Route::resource('/jabatan', JabatanController::class);
 
     //Video
     Route::resource('/video', VideoController::class);

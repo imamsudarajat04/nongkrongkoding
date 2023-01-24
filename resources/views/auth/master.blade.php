@@ -75,7 +75,8 @@
                             @endforeach
                         </div>
                     @endif
-
+                    
+                    <input type="hidden" name="roles" value="1">
                     <div class="input-field">
                         <i class="fas fa-envelope"></i>
                         <input type="email" name="email" id="email" placeholder="Email" />

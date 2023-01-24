@@ -16,7 +16,8 @@ class RegisterController extends Controller
         $data = $request->all();
         $data['password'] = Hash::make($request->password);
 
-        User::create($data);
+        $user = User::create($data);
+        $user->assignRole($request->input('roles'));
 
         Alert::success('', 'Berhasil Daftar!');
         return redirect()->route('login.index');
