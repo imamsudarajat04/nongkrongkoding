@@ -15,6 +15,9 @@
       background-repeat: no-repeat;
   }
   </style>
+
+  <!-- SweetAlert -->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 @endpush
 @section('title', 'Halaman Pengguna')
 @section('showMenu', 'show')
@@ -53,6 +56,7 @@
                 <th>Email</th>
                 <th>Nomor Handphone</th>
                 <th>Avatar</th>
+                <th>Jabatan</th>
                 <th width="150px">Aksi</th>
               </tr>
             </thead>
@@ -91,14 +95,24 @@
         {
           data: 'email',
           name: 'email',
+          orderable: false,
         },
         {
           data: 'telphone',
           name: 'telephone',
+          orderable: false,
         },
         {
           data: 'avatar',
           name: 'avatar',
+          orderable: false,
+          searchable: false,
+        },
+        {
+          data: "roles[0].name",
+          name: "roles",
+          orderable: false,
+          searchable: false,
         },
         {
             data: 'action',
@@ -107,7 +121,58 @@
             searchable: false,
             width: '1%'
         }
-      ]
+      ],
+      sDom: '<"secondBar d-flex flex-w1rap justify-content-between mb-2"lf>rt<"bottom"p>',
+      "fnCreatedRow": function(nRow, data) {
+          $(nRow).attr('id', 'pengguna' + data.id);
+      },
+    });
+
+    $(document).on('click', '#btn-hapus', function () {
+      let id = $(this).data('id');
+      let token = $("meta[name='csrf-token']").attr("content");
+
+      Swal.fire({
+          title: 'Apakah Kamu Yakin?',
+          text: "ingin menghapus data ini!",
+          icon: 'warning',
+          showCancelButton: true,
+          cancelButtonText: 'TIDAK',
+          confirmButtonText: 'YA, HAPUS!'
+      }).then((result) => {
+          if (result.isConfirmed) {
+
+              //fetch to delete data
+              $.ajax({
+
+                  url: `/data/pengguna/${id}`,
+                  type: "DELETE",
+                  cache: false,
+                  data: {
+                      "_token": token
+                  },
+                  success:function(response){ 
+
+                      //show success message
+                      Swal.fire({
+                          type: 'success',
+                          icon: 'success',
+                          title: `${response.message}`,
+                          showConfirmButton: false,
+                          timer: 3000
+                      });
+
+                      //remove post on table
+                      $('#pengguna' + id).remove();
+                      $('#tablePengguna').DataTable().ajax.reload();
+                      $('#tablePengguna').DataTable().draw();
+                  }
+              });
+
+              
+          }
+      })
+
     });
   </script>
 @endpush

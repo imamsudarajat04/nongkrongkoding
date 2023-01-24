@@ -5,7 +5,7 @@
     rel="stylesheet"
   />
 @endpush
-@section('title', 'Halaman Tambah Pengguna')
+@section('title', 'Halaman Edit Pengguna')
 @section('showMenu', 'show')
 @section('pengguna', 'active')
 
@@ -14,7 +14,7 @@
 @section('breadcrumb')
   <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboards</a></li>
   <li class="breadcrumb-item">Data Pengguna</li>
-  <li class="breadcrumb-item active">Tambah Pengguna</li>
+  <li class="breadcrumb-item active">Edit Pengguna</li>
 @endsection
 
 @section('content')
@@ -23,7 +23,7 @@
         <div class="card">
           <div class="card-header">
             <div class="d-flex align-items-center">
-              <h5 class="card-title mb-0 flex-grow-1">Tambah Pengguna</h5>
+              <h5 class="card-title mb-0 flex-grow-1">Edit Pengguna</h5>
 
               <div class="flex-shrink-0">
                 <a class="btn btn-danger add-btn" href="{!! route('pengguna.index') !!}">Kembali</a>
@@ -32,13 +32,14 @@
           </div>
 
           <div class="card-body">
-            <form action="{!! route('pengguna.store') !!}" method="POST" enctype="multipart/form-data">
+            <form action="{!! route('pengguna.update', $user->id) !!}" method="POST" enctype="multipart/form-data">
               @csrf
+              @method('PUT')
               <div class="row">
                 <div class="col-12">
                   <div class="mb-3">
                     <label for="Name" class="form-label">Nama Lengkap</label>
-                    <input type="text" class="form-control" name="name" id="name" value="{!! old('name') !!}" placeholder="Masukkan Nama Lengkap..">
+                    <input type="text" class="form-control" name="name" id="name" value="{!! old('name', $user->name) !!}" placeholder="Masukkan Nama Lengkap..">
 
                     @error('name')
                       <div class="mt-1">
@@ -51,7 +52,7 @@
                 <div class="col-12">
                   <div class="mb-3">
                     <label for="Email" class="form-label">Email</label>
-                    <input type="email" class="form-control" name="email" id="email" value="{!! old('email') !!}" placeholder="Masukkan Email..">
+                    <input type="email" class="form-control" name="email" id="email" value="{!! old('email', $user->email) !!}" disabled placeholder="Masukkan Email..">
 
                     @error('email')
                       <div class="mt-1">
@@ -92,7 +93,7 @@
                     <label for="Telephone" class="form-label">Nomor Handphone / WhatsApp</label>
                     <div class="input-group">
                       <div class="input-group-text">+62</div>
-                      <input type="text" class="form-control" name="telphone" id="telphone" value="{!! old('telphone') !!}" placeholder="8xxxxxxxxxx">
+                      <input type="text" class="form-control" name="telphone" id="telphone" value="{!! old('telphone', $user->telphone) !!}" placeholder="8xxxxxxxxxx">
                     </div>
 
                     @error('telphone')
@@ -120,6 +121,9 @@
                   <div class="mb-3">
                     <label for="Role" class="form-label">Jabatan</label>
                     <select class="js-example-basic-single select2-hidden-accessible" name="roles" id="roles">
+                      @foreach ( $roles as $r )
+                        <option value="{!! $r->id !!}" {!! $r->id == $userRole ? 'selected' : ''  !!}>{!! $r->name !!}</option>
+                      @endforeach
                     </select>
 
                     @error('roles')
@@ -131,7 +135,7 @@
                 </div>
 
                 <div class="d-grid gap-2">
-                  <button class="btn btn-primary" type="submit">Tambah Pengguna</button>
+                  <button class="btn btn-primary" type="submit">Ubah Data Pengguna</button>
                 </div>
               </div>
             </form>
@@ -155,22 +159,8 @@
 
     <script>
       $(document).ready(function () {
-        $("#roles").select2({
+        $('#roles').select2({
           placeholder: 'Cari Jabatan',
-
-          ajax: {
-              url : "{{ route('getRole') }}",
-              processResults: function({data}){
-                  return{
-                      results: $.map(data, function(item){
-                          return{
-                              id : item.id,
-                              text : item.name,
-                          }
-                      })
-                  }
-              },
-          }
         });
       });
     </script>

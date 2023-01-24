@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Models\User;
 use App\Models\Role;
+use Illuminate\Support\Arr;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PenggunaRequest;
@@ -30,7 +32,7 @@ class PenggunaController extends Controller
     public function index(Request $request)
     {
         if(request()->ajax()) {
-            $query = User::all();
+            $query = User::with('roles');
 
             return DataTables::of($query)
                 ->addColumn('action', function($item) {
@@ -55,7 +57,7 @@ class PenggunaController extends Controller
                             >
                           </li>
                           <li>
-                            <a class="dropdown-item edit-item-btn"
+                            <a class="dropdown-item edit-item-btn" href="' . route('pengguna.edit', $item->id) . '"
                               ><i
                                 class="ri-pencil-fill align-bottom me-2 text-muted"
                               ></i>
@@ -63,7 +65,7 @@ class PenggunaController extends Controller
                             >
                           </li>
                           <li>
-                            <a class="dropdown-item remove-item-btn">
+                            <a href="javascript:void(0);" class="dropdown-item remove-item-btn" id="btn-hapus" data-id="' . $item->id . '">
                               <i
                                 class="ri-delete-bin-fill align-bottom me-2 text-muted"
                               ></i>
@@ -93,7 +95,6 @@ class PenggunaController extends Controller
 
     public function getRole()
     {
-        // $roles = Role::pluck('id','id')->pluck('name', 'name')->all();
         $roles = Role::all();
         
         if(!empty($roles))
@@ -120,7 +121,8 @@ class PenggunaController extends Controller
      */
     public function create()
     {
-        return view('dashboard.pages.user.create');
+        $getRole = Role::all();
+        return view('dashboard.pages.user.create', compact('getRole'));
     }
 
     /**
@@ -161,7 +163,15 @@ class PenggunaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::findOrFail($id);
+        $roles = Role::all();
+        $userRole = $user->roles->pluck('id','id')->first();
+        
+        return view('dashboard.pages.user.edit', [
+          'user'     => $user,
+          'roles'    => $roles,
+          'userRole' => $userRole,
+        ]);
     }
 
     /**
@@ -171,9 +181,29 @@ class PenggunaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(PenggunaRequest $request, $id)
     {
-        //
+        $data = User::findOrFail($id);
+        $input = $request->all();
+
+        if(!empty($input['password'])) {
+          $input['password'] = Hash::make($input['password']);
+        }else{
+          $input = Arr::except($input,array('password'));
+        }
+
+        if($request->hasFile('avatar')) {
+          Storage::delete('public/' . $data->avatar);
+          $input['avatar'] = $request->file('avatar')->storage('avatar', 'public');
+        }
+
+        $data->update($input);
+
+        $cekRole = DB::table('model_has_roles')->where('model_id', $id)->delete();
+        $data->assignRole($request->input('roles'));
+
+        Alert::success('', 'Pendaftaran Pengguna Berhasil');
+        return redirect()->route('pengguna.index');
     }
 
     /**
@@ -184,6 +214,21 @@ class PenggunaController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $user = User::findOrFail($id);
+      $user->delete();
+      
+      if(empty($user)) {
+        return response()->json([
+          'status' => 404,
+          'message' => 'Data tidak ditemukan!',
+        ]);
+      }
+      else
+      {
+        return response()->json([
+          'status' => 200,
+          'message' => 'Data berhasil dihapus!',
+        ]);
+      }
     }
 }

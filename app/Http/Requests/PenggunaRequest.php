@@ -24,12 +24,13 @@ class PenggunaRequest extends FormRequest
      */
     public function rules()
     {
+        // dd(Auth::user());
         if(in_array($this->method(), ['PUT','PATCH'])) {
             $rules = [
                 'name'            => 'required|regex:/^[\pL\s\-]+$/u',
-                'email'           => 'required|email|unique:users,email,' . Auth::user()->id,
-                'password'        => ['required', 'regex:/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/', 'same:confirmPassword'],
-                'confirmPassword' => 'required',
+                'email'           => 'email|unique:users,email,'.Auth::user()->id,
+                // 'password'        => ['regex:/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/', 'same:confirmPassword'],
+                'password'        => ['same:confirmPassword'],
                 'telphone'        => ['required', 'regex:/^(^\+62|62|^08)(\d{3,4}-?){2}\d{3,4}$/', 'min:11'],
                 'avatar'          => 'file|mimes:png,jpg,jpeg|max:5120',
                 'roles'           => 'required',
