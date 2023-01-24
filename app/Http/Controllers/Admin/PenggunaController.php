@@ -77,6 +77,26 @@ class PenggunaController extends Controller
                     </td>
                   ';
                 })
+                ->editColumn('name', function($item) {
+                  if(empty($item->name))
+                  {
+                    return 'Anonym';
+                  }
+                  else
+                  {
+                    return "$item->name";
+                  }
+                })
+                ->editColumn('telphone', function ($item) {
+                  if(empty($item->telphone))
+                  {
+                    return '-';
+                  }
+                  else
+                  {
+                    return "$item->telphone";
+                  }
+                })
                 ->editColumn('avatar', function($item) {
                   $avatar = Storage::exists('public/' . $item->avatar) && $item->avatar ? Storage::url($item->avatar) : asset('admin/assets/img/avatars/1.png');
 
@@ -86,7 +106,7 @@ class PenggunaController extends Controller
                     </div>
                   ';
                 })
-                ->rawColumns(['action', 'avatar'])
+                ->rawColumns(['action', 'name', 'avatar'])
                 ->addIndexColumn()
                 ->make();
         }
