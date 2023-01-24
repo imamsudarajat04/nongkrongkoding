@@ -18,14 +18,14 @@
                                 <a href="{!! route('pengguna.index') !!}" class="nav-link @yield('pengguna')"> Pengguna </a>
                             </li>
                         @endcan
+                        @can('jabatan_access')    
+                            <li class="nav-item">
+                                <a href="{!! route('jabatan.index') !!}" class="nav-link @yield('jabatan')"> Jabatan </a>
+                            </li>
+                        @endcan
                         @can('hakakses_access')    
                             <li class="nav-item">
                                 <a href="#" class="nav-link @yield('hak-akses')"> Hak Akses </a>
-                            </li>
-                        @endcan
-                        @can('jabatan_access')    
-                            <li class="nav-item">
-                                <a href="#" class="nav-link @yield('jabatan')"> Jabatan </a>
                             </li>
                         @endcan
                     </ul>

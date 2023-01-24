@@ -16,6 +16,7 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class PenggunaController extends Controller
 {
+    //Middleware untuk pengguna
     public function __construct()
     {
       $this->middleware('permission:pengguna_access', ['only' => ['index']]);

@@ -35,19 +35,20 @@ Route::group(['middleware' => ['auth']], function() {
     Route::put('/updateProfile/{id}', [AdminprofileController::class, 'updateProfile'])->name('admin.updateProfile');
     Route::get('/password', [AdminprofileController::class, 'resetPassword'])->name('admin.password');
     Route::put('/password/{id}', [AdminprofileController::class, 'updatePassword'])->name('admin.updatePassword');
-
-    //Hak-akses
-    Route::resource('/hak-akses', PermissionController::class);
-
-    //Video-category
-    Route::resource('/video/category', CategoryController::class);
-
+    
+    
     //Pengguna
     Route::resource('/data/pengguna', PenggunaController::class);
     Route::get('getRole', [PenggunaController::class, 'getRole'])->name('getRole');
 
-    //Adminn
-    Route::resource('/data/admin', AdminController::class);
+    //Jabatan
+    Route::resource('/jabatan', JabatanController::class);
+    
+    //Hak-akses
+    Route::resource('/hak-akses', PermissionController::class);
+    
+    //Video-category
+    Route::resource('/video/category', CategoryController::class);
 
     //Video
     Route::resource('/video', VideoController::class);
