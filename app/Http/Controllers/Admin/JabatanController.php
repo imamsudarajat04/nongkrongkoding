@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use Spatie\Permission\Models\Role;
 use Illuminate\Support\Facades\DB;
+use App\Http\Requests\RoleRequest;
 use App\Http\Controllers\Controller;
 use Spatie\Permission\Models\Permission;
 use Yajra\DataTables\Facades\DataTables;
@@ -29,7 +30,7 @@ class JabatanController extends Controller
     public function index(Request $request)
     {
         if(request()->ajax()) {
-            $query = DB::table('roles')->get();
+            $query = Role::with('permissions');
 
             return DataTables::of($query)
                 ->addColumn('action', function ($item) {
@@ -46,7 +47,7 @@ class JabatanController extends Controller
                         </button>
                         <ul class="dropdown-menu dropdown-menu-end">
                           <li>
-                            <a class="dropdown-item edit-item-btn" href="' . route('pengguna.edit', $item->id) . '"
+                            <a class="dropdown-item edit-item-btn" href="' . route('jabatan.edit', $item->id) . '"
                               ><i
                                 class="ri-pencil-fill align-bottom me-2 text-muted"
                               ></i>
@@ -66,7 +67,10 @@ class JabatanController extends Controller
                     </td>
                   ';
                 })
-                ->rawColumns(['action'])
+                ->editColumn('permissions', function ($item) {
+                  return view('dashboard.pages.role.column.permission', compact('item'))->render();
+                })
+                ->rawColumns(['action', 'permissions'])
                 ->addIndexColumn()
                 ->make();
         }
@@ -80,7 +84,8 @@ class JabatanController extends Controller
      */
     public function create()
     {
-        //
+        $permissions = DB::table('permissions')->get();
+        return view('dashboard.pages.role.create', compact('permissions'));
     }
 
     /**
@@ -89,9 +94,13 @@ class JabatanController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(RoleRequest $request)
     {
-        //
+        $role = Role::create(['name' => $request->input('name')]);
+        $role->syncPermissions($request->input('permission'));
+
+        Alert::success('', 'Tambah Jabatan Berhasil');
+        return redirect()->route('jabatan.index');
     }
 
     /**
@@ -113,7 +122,20 @@ class JabatanController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = Role::findOrFail($id);
+        $permissions = Permission::all();
+        $data->load('permissions');
+        // dd($data->load('permissions'));
+        if($data->id == 2)
+        {
+          Alert::error('', 'Jabatan Super Admin Tidak Boleh Diubah!');
+          return redirect()->route('jabatan.index');
+        }
+
+        return view('dashboard.pages.role.edit', [
+          'data'        => $data,
+          'permissions' => $permissions,
+        ]);
     }
 
     /**
@@ -123,9 +145,16 @@ class JabatanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(RoleRequest $request, $id)
     {
-        //
+       $data = Role::findOrFail($id);
+       $req = $request->all();
+
+       $data->update($request->all());
+       $data->permissions()->sync($request->input('permission', []));
+
+       Alert::success('', 'Ubah Jabatan Berhasil');
+       return redirect()->route('jabatan.index');
     }
 
     /**
@@ -136,6 +165,28 @@ class JabatanController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = Role::findOrFail($id);
+        if($data->id == 2)
+        {
+          return response()->json([
+            'message' => 'Data tidak boleh dihapus',
+            'status'  => 403,
+          ]);
+        }
+        elseif(empty($data))
+        {
+          return response()->json([
+            'message' => 'Data tidak ditemukan!',
+            'status'  => 404,
+          ]);
+        }
+        else
+        {
+          $data->delete();
+          return response()->json([
+            'message' => 'Data berhasil dihapus!',
+            'status'  => 200,
+          ]);
+        }
     }
 }

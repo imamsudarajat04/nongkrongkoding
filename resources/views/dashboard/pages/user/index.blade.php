@@ -48,22 +48,24 @@
         </div>
 
         <div class="card-body">
-          <table class="table table-bordered dt-responsive nowrap table-striped align-middle" style="width: 100%" id="tablePengguna">
-            <thead>
-              <tr>
-                <th width="70px">No</th>
-                <th>Nama Lengkap</th>
-                <th>Email</th>
-                <th>Nomor Handphone</th>
-                <th>Avatar</th>
-                <th>Jabatan</th>
-                <th width="150px">Aksi</th>
-              </tr>
-            </thead>
-            <tbody>
-
-            </tbody>
-          </table>
+          <div class="table-responsive">
+            <table class="table table-bordered dt-responsive nowrap table-striped align-middle" style="width: 100%" id="tablePengguna">
+              <thead>
+                <tr>
+                  <th width="70px">No</th>
+                  <th>Nama Lengkap</th>
+                  <th>Email</th>
+                  <th>Nomor Handphone</th>
+                  <th>Avatar</th>
+                  <th>Jabatan</th>
+                  <th width="150px">Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
+  
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>

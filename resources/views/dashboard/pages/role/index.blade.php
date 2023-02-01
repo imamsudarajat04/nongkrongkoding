@@ -1,4 +1,8 @@
 @extends('dashboard.layout.DashboardLayout')
+@push('customCss')
+  <!-- SweetAlert -->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+@endpush
 
 @section('title', 'Halaman Jabatan')
 @section('showMenu', 'show')
@@ -29,19 +33,22 @@
         </div>
 
         <div class="card-body">
-          <table class="table table-bordered dt-responsive nowrap table-striped align-middle" style="width: 100%" id="tableJabatan">
-            <thead>
-              <tr>
-                <th width="70px">No</th>
-                <th>Jabatan</th>
-                <th width="150px">Aksi</th>
-              </tr>
-            </thead>
+          <div class="table-responsive">
+            <table class="table table-bordered dt-responsive nowrap table-striped align-middle" style="width: 100%" id="tableJabatan">
+              <thead>
+                <tr>
+                  <th width="10px">No</th>
+                  <th>Jabatan</th>
+                  <th width="100">Hak Akses</th>
+                  <th width="150px">Aksi</th>
+                </tr>
+              </thead>
 
-            <tbody>
+              <tbody>
 
-            </tbody>
-          </table>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
@@ -71,6 +78,12 @@
         name: 'name',
       },
       {
+        data: 'permissions',
+        name: 'permissions',
+        orderable: false,
+        searchable: false,
+      },
+      {
         data: 'action',
         name: 'action',
         orderable: false,
@@ -82,6 +95,80 @@
     "fnCreatedRow": function(nRow, data) {
       $(nRow).attr('id', 'jabatan' + data.id);
     },
+  });
+
+  $(document).on('click', '#btn-hapus', function () {
+    let id = $(this).data('id');
+    let token = $("meta[name='csrf-token']").attr("content");
+
+    Swal.fire({
+          title: 'Apakah Kamu Yakin?',
+          text: "ingin menghapus data ini!",
+          icon: 'warning',
+          showCancelButton: true,
+          cancelButtonText: 'TIDAK',
+          confirmButtonText: 'YA, HAPUS!'
+      }).then((result) => {
+          if (result.isConfirmed) {
+
+              //fetch to delete data
+              $.ajax({
+
+                  url: `/jabatan/${id}`,
+                  type: "DELETE",
+                  cache: false,
+                  data: {
+                      "_token": token
+                  },
+                  success:function(response){ 
+                    
+                    if(response.status == 403)
+                    {
+                      //show danger message
+                      Swal.fire({
+                        type: 'error',
+                        icon: 'error',
+                        title: `${response.message}`,
+                        showConfirmButton: false,
+                        timer: 3000
+                      });
+                    }
+                    else if(response.status == 404)
+                    {
+                      //show info message
+                      Swal.fire({
+                        type: 'info',
+                        icon: 'info',
+                        title: `${response.message}`,
+                        showConfirmButton: false,
+                        timer: 3000
+                      });
+                    }
+                    else
+                    {
+                      //show success message
+                      Swal.fire({
+                          type: 'success',
+                          icon: 'success',
+                          title: `${response.message}`,
+                          showConfirmButton: false,
+                          timer: 3000
+                      });
+
+                       // //remove post on table
+                      $('#jabatan' + id).remove();
+                      $('#tableJabatan').DataTable().ajax.reload();
+                      $('#tableJabatan').DataTable().draw();
+                    }
+                  },
+                  error: function(e) {
+                    console.log(e.message);
+                  }
+              });
+
+              
+          }
+      })
   });
 </script>
 @endpush

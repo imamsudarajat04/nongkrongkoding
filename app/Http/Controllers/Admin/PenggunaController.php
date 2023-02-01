@@ -223,7 +223,7 @@ class PenggunaController extends Controller
         $cekRole = DB::table('model_has_roles')->where('model_id', $id)->delete();
         $data->assignRole($request->input('roles'));
 
-        Alert::success('', 'Pendaftaran Pengguna Berhasil');
+        Alert::success('', 'Ubah Pengguna Berhasil');
         return redirect()->route('pengguna.index');
     }
 

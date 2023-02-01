@@ -14,7 +14,7 @@
 @section('breadcrumb')
   <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboards</a></li>
   <li class="breadcrumb-item">Data Pengguna</li>
-  <li class="breadcrumb-item active">Edit Pengguna</li>
+  <li class="breadcrumb-item active">Ubah Pengguna</li>
 @endsection
 
 @section('content')
@@ -23,7 +23,7 @@
         <div class="card">
           <div class="card-header">
             <div class="d-flex align-items-center">
-              <h5 class="card-title mb-0 flex-grow-1">Edit Pengguna</h5>
+              <h5 class="card-title mb-0 flex-grow-1">Ubah Pengguna</h5>
 
               <div class="flex-shrink-0">
                 <a class="btn btn-danger add-btn" href="{!! route('pengguna.index') !!}">Kembali</a>
