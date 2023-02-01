@@ -4,15 +4,15 @@
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 @endpush
 
-@section('title', 'Halaman Jabatan')
+@section('title', 'Halaman Hak Akses')
 @section('showMenu', 'show')
-@section('jabatan', 'active')
+@section('hak-akses', 'active')
 
-@section('pageTitle', 'Jabatan')
+@section('pageTitle', 'Hak Akses')
 
 @section('breadcrumb')
   <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboards</a></li>
-  <li class="breadcrumb-item active">Data Jabatan</li>
+  <li class="breadcrumb-item active">Data Hak Akses</li>
 @endsection
 
 @section('content')
@@ -22,11 +22,11 @@
 
         <div class="card-header">
           <div class="d-flex align-items-center">
-            <h5 class="card-title mb-0 flex-grow-1">Daftar Jabatan</h5>
+            <h5 class="card-title mb-0 flex-grow-1">Daftar Hak Akses</h5>
 
-            @can('jabatan_create')  
+            @can('hakakses_create')  
               <div class="flex-shrink-0">
-                <a class="btn btn-primary add-btn" href="{!! route('jabatan.create') !!}">Tambah Jabatan</a>
+                <a class="btn btn-primary add-btn" href="{!! route('hak-akses.create') !!}">Tambah Hak Akses</a>
               </div>
             @endcan
           </div>
@@ -34,12 +34,11 @@
 
         <div class="card-body">
           <div class="table-responsive">
-            <table class="table table-bordered dt-responsive nowrap table-striped align-middle" style="width: 100%" id="tableJabatan">
+            <table class="table table-bordered dt-responsive nowrap table-striped align-middle" style="width: 100%" id="tablePermission">
               <thead>
                 <tr>
                   <th width="10px">No</th>
-                  <th>Jabatan</th>
-                  <th width="100">Hak Akses</th>
+                  <th>Nama</th>
                   <th width="150px">Aksi</th>
                 </tr>
               </thead>
@@ -57,7 +56,7 @@
 
 @push('customJs')
 <script>
-  $('#tableJabatan').DataTable({
+  $('#tablePermission').DataTable({
     processing: true,
     serverSide: true,
     ordering: true,
@@ -78,12 +77,6 @@
         name: 'name',
       },
       {
-        data: 'permissions',
-        name: 'permissions',
-        orderable: false,
-        searchable: false,
-      },
-      {
         data: 'action',
         name: 'action',
         orderable: false,
@@ -93,7 +86,7 @@
     ],
     sDom: '<"secondBar d-flex flex-w1rap justify-content-between mb-2";f>rt<"bottom"p>',
     "fnCreatedRow": function(nRow, data) {
-      $(nRow).attr('id', 'jabatan' + data.id);
+      $(nRow).attr('id', 'permission' + data.id);
     },
   });
 

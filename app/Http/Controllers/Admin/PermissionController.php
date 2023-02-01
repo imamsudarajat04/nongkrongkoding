@@ -2,13 +2,22 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
 use App\Models\Permission;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Yajra\DataTables\Facades\DataTables;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class PermissionController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('permission:hakakses_access', ['only' => ['index']]);
+        $this->middleware('permission:hakakses_create', ['only' => ['create', 'post']]);
+        $this->middleware('permission:hakakses_edit', ['only' => ['edit', 'update']]);
+        $this->middleware('permission:hakakses_delete', ['only' => ['destroy']]);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -16,26 +25,57 @@ class PermissionController extends Controller
      */
     public function index(Request $request)
     {
-        //index
-        // if(request()->ajax()) {
-        //     $data = Permission::all();
+        if(request()->ajax()) {
+            $query = Permission::all();
 
-        //     return DataTables::of($data)
-        //         ->addColumn('action', function ($item) {
-        //             return '
-        //                  <a class="btn btn-primary" href="' . route('hak-akses.edit', $item->id) . '">
-        //                     <i class="fas fa-pen"></i> Ubah
-        //                 </a>
-        //                 <button class="btn btn-danger delete_warga" data-id="' . $item->id . '">
-        //                     <i class="fas fa-trash"></i> Hapus
-        //                 </button>
-        //             ';
-        //         })
-        //         ->rawColumns(['action'])
-        //         ->addIndexColumn()
-        //         ->make();
-        // }
-        // return view('dashboard.hak-akses.index');
+            return DataTables::of($query)
+                ->addColumn('action', function($item) {
+                  return '
+                    <td>
+                      <div class="dropdown d-inline-block">
+                        <button
+                          class="btn btn-soft-secondary btn-sm dropdown"
+                          type="button"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <i class="ri-more-fill align-middle"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                          <li>
+                            <a href="#!" class="dropdown-item"
+                              ><i
+                                class="ri-eye-fill align-bottom me-2 text-muted"
+                              ></i>
+                              View</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item edit-item-btn" href="' . route('pengguna.edit', $item->id) . '"
+                              ><i
+                                class="ri-pencil-fill align-bottom me-2 text-muted"
+                              ></i>
+                              Edit</a
+                            >
+                          </li>
+                          <li>
+                            <a href="javascript:void(0);" class="dropdown-item remove-item-btn" id="btn-hapus" data-id="' . $item->id . '">
+                              <i
+                                class="ri-delete-bin-fill align-bottom me-2 text-muted"
+                              ></i>
+                              Delete
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  ';
+                })
+                ->rawColumns(['action'])
+                ->addIndexColumn()
+                ->make();
+        }
+        return view('dashboard.pages.permission.index');
     }
 
     /**

@@ -7,9 +7,10 @@
                 </a>
             </li> <!-- end Dashboard Menu -->
         @can('menu_access')    
-            <li class="nav-item"> <!-- Todo Fixing Responsive Menu -->
-                <a class="nav-link menu-link" href="#Users" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarDashboards">
-                    <i class="mdi mdi-account-group"></i> Data Pengguna
+            <li class="nav-item"> <!-- Todo Fixing Responsive -->
+                <a class="nav-link menu-link" href="#Users" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="Users">
+                    <i class="mdi mdi-account-group"></i> 
+                    <span data-key="t-Users">Data Pengguna</span>
                 </a>
                 <div class="collapse menu-dropdown @yield('showMenu')" id="Users">
                     <ul class="nav nav-sm flex-column">
@@ -25,7 +26,7 @@
                         @endcan
                         @can('hakakses_access')    
                             <li class="nav-item">
-                                <a href="#" class="nav-link @yield('hak-akses')"> Hak Akses </a>
+                                <a href="{!! route('hak-akses.index') !!}" class="nav-link @yield('hak-akses')"> Hak Akses </a>
                             </li>
                         @endcan
                     </ul>
